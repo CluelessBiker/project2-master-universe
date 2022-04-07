@@ -46,7 +46,8 @@ The Master of the Universe site is live, the link to which can be found [HERE](h
 ## Design
 
 ### Wireframes:
-![]()
+![Desktop wireframe](/assets/images/images-readme/wireframe-fullscreen.png)
+![Smartphone wireframe](/assets/images/images-readme/wireframe-smartphone.png)
 
 ### Colour Scheme:
 
