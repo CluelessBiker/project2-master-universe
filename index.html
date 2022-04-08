@@ -29,9 +29,30 @@
         <div id="doodle">
             <img id="defaultImage" src="assets/images/images-artwork/defaultimage.jpg" alt="Planet earth">
         </div>
+
         <div>
             Toggle switches
         </div>
+        
+        <!-- Code originated from https://codepen.io/timtech/pen/ezRamp -->
+        <div class="toggleDayNight">
+            <input type="radio" id="day" class="left-position" name="toggle3"/>
+            <input type="radio" id="day-night" class="neutral-position" name="toggle3" checked />
+            <input type="radio" id="night" class="right-position" name="toggle3"  />
+            <div class=topLabelContainer>
+                <label class=labelTop1 for="day">day</label>
+                <label class=labelTop2 for="day-night">/</label>
+                <label class=labelTop3 for="night">night</label>
+            </div>
+            <!-- <span class=labelLeft>select color:</span> -->
+            <span class=sliderContainer>
+              <label class="label1" for="day"></label>
+              <label class="label2" for="daynight"></label>
+              <label class="label3" for="night"></label>
+              <span class="slider-ball"></span>
+            </span>
+        <div>
+        
         <div>
             <input type="submit" id="submit-button" value="submit" aria-label="Button that checks the game">
         </div>
