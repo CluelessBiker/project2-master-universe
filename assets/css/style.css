@@ -24,7 +24,7 @@ h3, p{
     text-align: center;
     height:auto;
     width:100%;
-    color:rgb(3, 3, 34);
+    color:rgb(7, 7, 74);
 }
 
 #pageTitle h1{
@@ -39,10 +39,11 @@ h3, p{
     padding-bottom:10px;
 }
 
+/* Interactive drawing frame in place */
 #doodle{
     width:500px;
     height:500px;
-    border: 3px solid rgb(3, 3, 34);
+    border: 3px solid rgb(7, 7, 74);
     margin:0 auto;
     overflow:hidden;
     background-size: 100%;
@@ -50,6 +51,29 @@ h3, p{
 
 #doodle img{
     width:100%;
+}
+
+/* Submit button */
+#game-area{
+    text-align:center;
+    width:100%;
+}
+
+#submit-button{
+    font-size:150%;
+    text-transform:uppercase;
+    font-family: 'Rubik Wet Paint', cursive;
+    border-radius:10px;
+    padding:10px;
+    margin:10px;
+    text-align:center;
+    background-color:rgb(7, 7, 74);
+    color:#B5DAA5;
+}
+
+#submit-button:hover{
+    background-color:#B5DAA5;
+    color:rgb(7, 7, 74);
 }
 
 /* Footer styling - taken from my last project & modified slightly. */
@@ -65,7 +89,7 @@ footer{
 }
 
 #social-links >li{
-    color:rgb(3, 3, 34);
+    color:rgb(7, 7, 74);
     font-size:140%;
     display:inline-block;
     
@@ -74,10 +98,10 @@ footer{
 #social-links i{
     font-size: 140%;
     padding:10px 30px;
-    color:rgb(3, 3, 34);
+    color:rgb(7, 7, 74);
     text-decoration:none;
 }
 
 #social-links i:hover{
-    color:#28d915;
+    color:#B5DAA5;
 }
