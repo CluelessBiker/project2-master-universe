@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Kanit&family=Rubik+Moonrocks&family=Rubik+Wet+Paint&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    border:0;
+}
+
+h1 {
+font-family: 'Rubik Moonrocks', cursive;
+}
+
+h2 {
+    font-family: 'Kanit', sans-serif;
+}
+
+h3, p{
+    font-family: 'Grape Nuts', cursive;
+}
+
+/* Page title & tag line */
+#pageTitle{
+    margin:0 auto;
+    text-align: center;
+    height:auto;
+    width:100%;
+    color:rgb(3, 3, 34);
+}
+
+#pageTitle h1{
+    text-transform:uppercase;
+    font-size:5vw;
+    padding:10px;
+}
+
+#pageTitle h2{
+    text-transform:lowercase;
+    font-size:4vw;
+    padding-bottom:10px;
+}
+
+#doodle{
+    width:500px;
+    height:500px;
+    border: 3px solid rgb(3, 3, 34);
+    margin:0 auto;
+    overflow:hidden;
+    background-size: 100%;
+}
+
+#doodle img{
+    width:100%;
+}
+
+/* Footer styling - taken from my last project & modified slightly. */
+footer{
+    width:90%;
+    height:75px;
+    margin:0 auto;
+    text-align:center;
+}
+
+#social-links{
+    padding:10px;
+}
+
+#social-links >li{
+    color:rgb(3, 3, 34);
+    font-size:140%;
+    display:inline-block;
+    
+}   
+
+#social-links i{
+    font-size: 140%;
+    padding:10px 30px;
+    color:rgb(3, 3, 34);
+    text-decoration:none;
+}
+
+#social-links i:hover{
+    color:#28d915;
+}

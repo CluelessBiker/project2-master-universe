@@ -32,6 +32,7 @@ The Master of the Universe site is live, the link to which can be found [HERE](h
 ## UX
 
 ### Site Purpose:
+The design of an interactive little challenge that is meant to involve the user in creating the final art project. There is only one right answer though, and this will be revealed upon the right combination of switches being engaged. Upon which, a new background will load accompanied by a congratulatory message.
 
 ### Site Goal:
 
@@ -52,6 +53,11 @@ The Master of the Universe site is live, the link to which can be found [HERE](h
 ### Colour Scheme:
 
 ### Typography:
+All fonts were obtained from the Google Fonts librabry. I chose the following three fonts for the page:
+1. Rubik Moonrocks - This is the main heading font, and it resembles the universe. It felt fitting to the design.
+2. Kanit - for the tagline. I wanted it to be easy to read.
+3. Grape Nuts - for the labels of the toggle switches & footer text. As it looks handwritten, it fits with the feel of the doodle/drawing that can be manipulated.
+4. Rubik Wet Paint - To give an eirie feel to the submit button.
 
 ### Imagery:
 
