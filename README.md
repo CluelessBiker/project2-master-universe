@@ -82,6 +82,7 @@ All fonts were obtained from the Google Fonts librabry. I chose the following th
 
 ## Testing
 - The default page image, along with the favicon were loading in the gitpod preview of the site, however would not load through the link generated in github. A friend suggested that the error lay with my file paths starting with a "/", and that my image name also contained a space. Once the space & the starting "/" were removed, the issue was resolved. Thank you [Mats](https://github.com/Pelikantapeten).
+- I struggled to understand how to add an event listener that would also indicate which radio button was toggled. After several hours of trying to understand what I was doing wrong, I contacted C.I. tutor support, and Ger was king enough to show me I had a an errant capital letter in my JS file.
 
 ### Validator Testing
 - html files pass through the [W3C validator](https://validator.w3.org/) with no issues found.
@@ -120,8 +121,11 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 ## Credits
 
 ### Content
-
 Support was provided by my fellow student [Mats](https://github.com/Pelikantapeten) by aiding me in bouncing off ideas & venting frustrations. They were also immeasurably helpful in explaining Media Queries in a way that I was able to grasp. They also informed me that when creating a contact form, one most also create a form-dump page.
+
+Code for the radio buttons came from [Codepen](https://codepen.io/timtech/pen/ezRamp).
+
+Adding an event listener for radio buttons came from [Telusko](https://www.youtube.com/watch?v=r3Oc4IUP0XI)
 
 ### Media
 - All artwork created by me.
