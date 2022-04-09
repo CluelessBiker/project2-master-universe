@@ -53,6 +53,20 @@ h3, p{
     width:100%;
 }
 
+/* Toggle switches */
+/* Code originated from https://codepen.io/timtech/pen/ezRamp */
+#toggle-switches{
+    margin:0 auto;
+    text-align:center;
+}
+.toggleSwitch{
+    padding: 10px 0;
+    display: inline-block;
+    width: 170px;
+    font-family: 'Grape Nuts', cursive;
+    font-size: 1.5em;
+}
+
 /* Submit button */
 #game-area{
     text-align:center;

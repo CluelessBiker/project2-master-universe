@@ -30,28 +30,54 @@
             <img id="defaultImage" src="assets/images/images-artwork/defaultimage.jpg" alt="Planet earth">
         </div>
 
-        <div>
-            Toggle switches
-        </div>
-        
         <!-- Code originated from https://codepen.io/timtech/pen/ezRamp -->
-        <div class="toggleDayNight">
-            <input type="radio" id="day" class="left-position" name="toggle3"/>
-            <input type="radio" id="day-night" class="neutral-position" name="toggle3" checked />
-            <input type="radio" id="night" class="right-position" name="toggle3"  />
-            <div class=topLabelContainer>
-                <label class=labelTop1 for="day">day</label>
-                <label class=labelTop2 for="day-night">/</label>
-                <label class=labelTop3 for="night">night</label>
+        <div id="toggle-switches">
+            <div class="toggleDayNight toggleSwitch">
+                <input type="radio" id="day" class="left-position" name="toggle-day-night"/>
+                <input type="radio" id="day-night" class="neutral-position" name="toggle-day-night" />
+                <input type="radio" id="night" class="right-position" name="toggle-day-night" checked />
+                <div class="topLabelContainer">
+                    <label class="labelTop1" for="day">day</label>
+                    <label class="labelTop2" for="day-night">/</label>
+                    <label class="labelTop3" for="night">night</label>
+                </div>
+                <span class=sliderContainer></span>
+                <label class="label1" for="day"></label>
+                <label class="label2" for="day-night"></label>
+                <label class="label3" for="night"></label>
+                <span class="slider-ball"></span>
             </div>
-            <!-- <span class=labelLeft>select color:</span> -->
-            <span class=sliderContainer>
-              <label class="label1" for="day"></label>
-              <label class="label2" for="daynight"></label>
-              <label class="label3" for="night"></label>
-              <span class="slider-ball"></span>
-            </span>
-        <div>
+            <div class="toggleCalmChaos toggleSwitch">
+                <input type="radio" id="calm" class="left-position" name="toggle-calm-chaos"/>
+                <input type="radio" id="calm-chaos" class="neutral-position" name="toggle-calm-chaos" />
+                <input type="radio" id="chaos" class="right-position" name="toggle-calm-chaos" checked />
+                <div class="topLabelContainer">
+                    <label class="labelTop1" for="calm">calm</label>
+                    <label class="labelTop2" for="calm-chaos">/</label>
+                    <label class="labelTop3" for="chaos">chaos</label>
+                </div>
+                <span class=sliderContainer></span>
+                <label class="label1" for="calm"></label>
+                <label class="label2" for="calm-chaos"></label>
+                <label class="label3" for="chaos"></label>
+                <span class="slider-ball"></span>
+            </div>
+            <div class="toggleNatureCivilisation toggleSwitch">
+                <input type="radio" id="nature" class="left-position" name="toggle-nature-civilisation"/>
+                <input type="radio" id="nature-civilisation" class="neutral-position" name="toggle-nature-civilisation" />
+                <input type="radio" id="civilisation" class="right-position" name="toggle-nature-civilisation" checked />
+                <div class="topLabelContainer">
+                    <label class="labelTop1" for="nature">nature</label>
+                    <label class="labelTop2" for="nature-civilisation">/</label>
+                    <label class="labelTop3" for="civilisation">civilisation</label>
+                </div>
+                <span class=sliderContainer></span>
+                <label class="label1" for="nature"></label>
+                <label class="label2" for="nature-civilisation"></label>
+                <label class="label3" for="civilisation"></label>
+                <span class="slider-ball"></span>
+            </div>
+        </div>  
         
         <div>
             <input type="submit" id="submit-button" value="submit" aria-label="Button that checks the game">
