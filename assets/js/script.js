@@ -2,17 +2,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
 })
 
-// Images to be loaded upon button clicks
-let graphicArray = new Array();
 
-graphicArray[0] = new Image();
-graphicArray[0].src = '../images/images-artwork/day.jpg';
 
-graphicArray[1] = new Image();
-graphicArray[1].src = '../images/images-artwork/night.jpg';
-
-let myButton = document.getElementById("toggleDayNight")
-myButton.addEventListener('click', dayNight);
+// function for first set of radio buttons : day/night
+let firstToggle = document.getElementById("toggleDayNight")
+firstToggle.addEventListener('click', dayNight);
 
 
 function dayNight(event){
@@ -24,9 +18,57 @@ function dayNight(event){
         document.getElementById("defaultImage").src='assets/images/images-artwork/day.jpg';
     } else if (night.checked){
         document.getElementById("defaultImage").src='assets/images/images-artwork/night.jpg';
+    } else if (neutral.checked){
+        document.getElementById("defaultImage").src='assets/images/images-artwork/emptyspace.png';
     } else {
-        document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.jpg';
+        alert("Hey! You got it right! :D");
+    }
+}
+
+// function for second set of radio buttons : calm/chaos
+let secondToggle = document.getElementById("toggleCalmChaos")
+secondToggle.addEventListener('click', calmChaos);
+
+function calmChaos(event){
+    let calm = document.getElementById("calm");
+    let neutral2 = document.getElementById("calm-chaos");
+    let chaos = document.getElementById("chaos");
+
+    if (calm.checked) {
+        // document.getElementById("defaultImage").src='assets/images/images-artwork/calm.png';
+        // document.getElementById('doodle').innerHTML = '<img id="calm-png" src=assets/images/images-artwork/calm.png alt="Panet earth, calm">';
+        let img = document.createElement('img');
+        img.src = 
+        img.setAttribute("src", "assets/images/images-artwork/calm.png")
+        img.setAttribute("id", "Panet earth, calm")
+        document.getElementById("doodle").appentChild(img);
+        
+    } else if (chaos.checked){
+        document.getElementById("defaultImage").src='assets/images/images-artwork/chaos.png';
+    } else if (neutral2.checked){
+        document.getElementById("defaultImage").src='assets/images/images-artwork/emptyspace.png';
+    } else {
         // alert("Hey! You got it right! :D");
+    }
+}
+
+// function for third set of radio buttons : nature/civilisation
+let thirdToggle = document.getElementById("toggleNatureCivilisation")
+thirdToggle.addEventListener('click', natureCivilisation);
+
+function natureCivilisation(event){
+    let nature = document.getElementById("nature");
+    let neutral3 = document.getElementById("nature-civilisation");
+    let civilisation = document.getElementById("civilisation");
+
+    if (nature.checked) {
+        document.getElementById("defaultImage").src='assets/images/images-artwork/nature.png';
+    } else if (civilisation.checked){
+        document.getElementById("defaultImage").src='assets/images/images-artwork/civilisation.png';
+    } else if (nature-civilisation){
+        document.getElementById("defaultImage").src='assets/images/images-artwork/emptyspace.png';
+    } else {
+        alert("Hey! You got it right! :D");
     }
 }
 
