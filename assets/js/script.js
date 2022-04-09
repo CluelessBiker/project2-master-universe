@@ -21,11 +21,12 @@ function dayNight(event){
     let night = document.getElementById("night");
 
     if (day.checked) {
-        alert("Hey! You got it right! :D");
-    } else if (night.checked === true){
-        alert("nope");
+        document.getElementById("defaultImage").src='assets/images/images-artwork/day.jpg';
+    } else if (night.checked){
+        document.getElementById("defaultImage").src='assets/images/images-artwork/night.jpg';
     } else {
-        alert("you checked nothing");
+        document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.jpg';
+        // alert("Hey! You got it right! :D");
     }
 }
 
