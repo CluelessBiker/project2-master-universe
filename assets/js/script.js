@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-})
+});
 
 
 // function for first set of radio buttons : day/night
@@ -31,11 +31,15 @@ function calmChaos(event){
     let calm = document.getElementById("calm");
     let neutral2 = document.getElementById("calm-chaos");
     let chaos = document.getElementById("chaos");
+
+    let testDelete = document.getElementById("calmChaosOverlay");
+    testDelete.innerHTML = "";
+
     let img = document.createElement('img');
-    // img.src = 'assets/images/images-artwork/calm.png';
-    // img.alt = "A calm planet earth";
     img.id = "calmChaosImage";
+    img.alt = "Calm or Chaos";
     document.getElementById("calmChaosOverlay").appendChild(img);
+
 
     if (calm.checked) {
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/calm.png';
@@ -56,9 +60,12 @@ function natureCivilisation(event){
     let nature = document.getElementById("nature");
     let neutral3 = document.getElementById("nature-civilisation");
     let civilisation = document.getElementById("civilisation");
+
+    let testDelete = document.getElementById("natureCivilisationOverlay");
+    testDelete.innerHTML = "";
+
     let img = document.createElement('img');
-    // img.src = 'assets/images/images-artwork/calm.png';
-    // img.alt = "A calm planet earth";
+    img.alt = "Nature or Civilisation";
     img.id = "natureCivilisationImage";
     document.getElementById("natureCivilisationOverlay").appendChild(img);
 
