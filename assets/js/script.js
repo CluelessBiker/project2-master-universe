@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-});
-
-
 // function for first set of radio buttons : day/night
 let firstToggle = document.getElementById("toggleDayNight")
 firstToggle.addEventListener('click', dayNight);
@@ -46,7 +43,7 @@ function calmChaos(event){
     } else if (chaos.checked){
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/chaos.png';
     } else if (neutral2.checked){
-        document.getElementById("calmChaosImage").src='assets/images/images-artwork/emptyspace.png';
+        document.getElementById("calmChaosImage").src='assets/images/images-artwork/defaultimage.png';
     } else {
         // alert("Hey! You got it right! :D");
     }
@@ -91,8 +88,17 @@ document.getElementById("submit-button'").addEventListener("keydown", function(e
 })    
 
 function finalTally(event){
-    alert("Hey! I do nothing! :D");
+    let night = document.getElementById("night");
+    let chaos = document.getElementById("chaos");
+    let nature = document.getElementById("nature");
+    
+    if (night.checked === chaos.checked === nature.checked){
+        alert("Congratulations, you wiped out humanity!");
+    } else {
+        alert("well y'all did somthing...");
+    }
+    
 
 }
 
-
+});
