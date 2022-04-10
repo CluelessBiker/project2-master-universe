@@ -3,11 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 
 
-
 // function for first set of radio buttons : day/night
 let firstToggle = document.getElementById("toggleDayNight")
 firstToggle.addEventListener('click', dayNight);
-
 
 function dayNight(event){
     let day = document.getElementById("day");
@@ -58,16 +56,49 @@ function natureCivilisation(event){
     let nature = document.getElementById("nature");
     let neutral3 = document.getElementById("nature-civilisation");
     let civilisation = document.getElementById("civilisation");
+    let img = document.createElement('img');
+    // img.src = 'assets/images/images-artwork/calm.png';
+    // img.alt = "A calm planet earth";
+    img.id = "natureCivilisationImage";
+    document.getElementById("natureCivilisationOverlay").appendChild(img);
 
     if (nature.checked) {
-        document.getElementById("defaultImage").src='assets/images/images-artwork/nature.png';
+        document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/nature.png';
     } else if (civilisation.checked){
-        document.getElementById("defaultImage").src='assets/images/images-artwork/civilisation.png';
-    } else if (nature-civilisation){
-        document.getElementById("defaultImage").src='assets/images/images-artwork/emptyspace.png';
+        document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/civilisation.png';
+    } else if (neutral3.checked){
+        document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
     } else {
-        alert("Hey! You got it right! :D");
+        // alert("Hey! You got it right! :D");
     }
 }
+
+
+
+
+// let thirdToggle = document.getElementById("toggleNatureCivilisation")
+// thirdToggle.addEventListener('click', natureCivilisation);
+
+// function natureCivilisation(event){
+//     let nature = document.getElementById("nature");
+//     let neutral3 = document.getElementById("nature-civilisation");
+//     let civilisation = document.getElementById("civilisation");
+//     let img = document.createElement('img');
+//     img.id = "natureCivilisationImage";
+//     document.getElementById("natureCivilisationOverlay").appendChild(img);
+
+//     if (nature.checked) {
+//         document.getElementById("natureCivilisationOverlay").src='assets/images/images-artwork/nature.png';
+//         // alert("test");
+//     } else if (civilisation.checked){
+//         document.getElementById("natureCivilisationOverlay").src='assets/images/images-artwork/civilisation.png';
+//         // alert("test");
+//     } else if (neutral3.checked){
+//         document.getElementById("natureCivilisationOverlay").src='assets/images/images-artwork/emptyspace.png';
+//         // alert("test");
+//     } else {
+        
+//     }
+// }
 
 
