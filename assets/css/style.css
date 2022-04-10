@@ -73,6 +73,7 @@ h3, p{
 #toggle-switches{
     margin:0 auto;
     text-align:center;
+    position:relative;
 }
 
 .toggleSwitch{
@@ -82,6 +83,78 @@ h3, p{
     font-family: 'Grape Nuts', cursive;
     font-size: 1.5em;
     color:rgb(7, 7, 74);
+}
+
+.left-position,
+.neutral-position,
+.right-position {
+    position: absolute;
+    left: -9999px
+}
+
+.sliderContainer{
+    height: 0.9em;
+    width: 3em;
+    margin: 2px auto;
+    border: 1px solid rgb(7, 7, 74);
+    border-radius:34px;
+    position: relative;
+    padding: 1px;
+    display: inline-block;
+    background: #B5DAA5
+}
+  
+/* .label1,
+.label2,
+.label3 {
+    height: 100%;
+    width: 100%;
+    padding: 2px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #B5DAA5;
+} */
+
+.left-position:checked ~ span .label1,
+.left-position:checked ~ span .label3,
+.neutral-position:checked ~ span .label1,
+.neutral-position:checked ~ span .label2,
+.right-position:checked ~ span .label2,
+.right-position:checked ~ span .label3 {
+    position: absolute;
+    left: -9999px;
+}
+
+.slider-ball {
+    width: 1em;
+    height: 1em;
+    /* margin: 2px; */
+    border-radius:50%;
+    position: absolute;
+    display: inline-block;
+    pointer-events: none;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:rgb(7, 7, 74);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.neutral-position:checked ~ span .slider-ball {
+    -webkit-transform: translateX(1em);
+    -ms-transform: translateX(1em);
+    transform: translateX(1em);
+}
+  
+.right-position:checked ~ span .slider-ball {
+    -webkit-transform: translateX(2em);
+    -ms-transform: translateX(2em);
+    transform: translateX(2em);
 }
 
 /* Submit button */
