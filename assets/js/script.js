@@ -33,24 +33,18 @@ function calmChaos(event){
     let calm = document.getElementById("calm");
     let neutral2 = document.getElementById("calm-chaos");
     let chaos = document.getElementById("chaos");
+    let img = document.createElement('img');
+    // img.src = 'assets/images/images-artwork/calm.png';
+    // img.alt = "A calm planet earth";
+    img.id = "calmChaosImage";
+    document.getElementById("calmChaosOverlay").appendChild(img);
 
     if (calm.checked) {
-        // document.getElementById("defaultImage").src='assets/images/images-artwork/calm.png';
-        // document.getElementById('doodle').innerHTML = '<img id="calm-png" src=assets/images/images-artwork/calm.png alt="Panet earth, calm">';
-        let img = document.createElement('img');
-        img.src = 'assets/images/images-artwork/calm.png';
-        // img.setAttribute("src", "assets/images/images-artwork/calm.png");
-        // img.setAttribute("alt", "Panet earth, calm");
-        img.alt = "A calm planet earth";
-        // img.setAttribute("id", "calm-png");
-        img.id = "calm-png";
-        document.getElementById("calmChaosOverlay").appendChild(img);
-        
-
+        document.getElementById("calmChaosImage").src='assets/images/images-artwork/calm.png';
     } else if (chaos.checked){
-        document.getElementById("defaultImage").src='assets/images/images-artwork/chaos.png';
+        document.getElementById("calmChaosImage").src='assets/images/images-artwork/chaos.png';
     } else if (neutral2.checked){
-        document.getElementById("defaultImage").src='assets/images/images-artwork/emptyspace.png';
+        document.getElementById("calmChaosImage").src='assets/images/images-artwork/emptyspace.png';
     } else {
         // alert("Hey! You got it right! :D");
     }
