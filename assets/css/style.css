@@ -104,7 +104,7 @@ h3, p{
     background: #B5DAA5
 }
   
-/* .label1,
+.label1,
 .label2,
 .label3 {
     height: 100%;
@@ -115,8 +115,8 @@ h3, p{
     bottom: 0;
     left: 0;
     right: 0;
-    background: #B5DAA5;
-} */
+    /* background: #B5DAA5; */
+}
 
 .left-position:checked ~ span .label1,
 .left-position:checked ~ span .label3,
