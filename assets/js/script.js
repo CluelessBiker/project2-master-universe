@@ -38,13 +38,10 @@ function calmChaos(event){
     document.getElementById("calmChaosOverlay").appendChild(img);
 
     if (calm.checked) {
-        img.remove();
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/calm.png';
     } else if (chaos.checked){
-        img.remove();
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/chaos.png';
     } else if (neutral2.checked){
-        img.remove();
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/emptyspace.png';
     } else {
         // alert("Hey! You got it right! :D");
@@ -76,32 +73,19 @@ function natureCivilisation(event){
     }
 }
 
+// Tallying the results to see if the universe is doomed.
+let submit = document.getElementById('submit-button');
+submit.addEventListener('click', finalTally);
 
+document.getElementById("submit-button'").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        finalTally();
+    };
+})    
 
+function finalTally(event){
+    alert("Hey! I do nothing! :D");
 
-// let thirdToggle = document.getElementById("toggleNatureCivilisation")
-// thirdToggle.addEventListener('click', natureCivilisation);
-
-// function natureCivilisation(event){
-//     let nature = document.getElementById("nature");
-//     let neutral3 = document.getElementById("nature-civilisation");
-//     let civilisation = document.getElementById("civilisation");
-//     let img = document.createElement('img');
-//     img.id = "natureCivilisationImage";
-//     document.getElementById("natureCivilisationOverlay").appendChild(img);
-
-//     if (nature.checked) {
-//         document.getElementById("natureCivilisationOverlay").src='assets/images/images-artwork/nature.png';
-//         // alert("test");
-//     } else if (civilisation.checked){
-//         document.getElementById("natureCivilisationOverlay").src='assets/images/images-artwork/civilisation.png';
-//         // alert("test");
-//     } else if (neutral3.checked){
-//         document.getElementById("natureCivilisationOverlay").src='assets/images/images-artwork/emptyspace.png';
-//         // alert("test");
-//     } else {
-        
-//     }
-// }
+}
 
 
