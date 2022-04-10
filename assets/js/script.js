@@ -38,11 +38,15 @@ function calmChaos(event){
         // document.getElementById("defaultImage").src='assets/images/images-artwork/calm.png';
         // document.getElementById('doodle').innerHTML = '<img id="calm-png" src=assets/images/images-artwork/calm.png alt="Panet earth, calm">';
         let img = document.createElement('img');
-        img.src = 
-        img.setAttribute("src", "assets/images/images-artwork/calm.png")
-        img.setAttribute("id", "Panet earth, calm")
-        document.getElementById("doodle").appentChild(img);
+        img.src = 'assets/images/images-artwork/calm.png';
+        // img.setAttribute("src", "assets/images/images-artwork/calm.png");
+        // img.setAttribute("alt", "Panet earth, calm");
+        img.alt = "A calm planet earth";
+        // img.setAttribute("id", "calm-png");
+        img.id = "calm-png";
+        document.getElementById("calmChaosOverlay").appendChild(img);
         
+
     } else if (chaos.checked){
         document.getElementById("defaultImage").src='assets/images/images-artwork/chaos.png';
     } else if (neutral2.checked){

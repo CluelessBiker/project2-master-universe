@@ -127,5 +127,9 @@ Code for the radio buttons came from [Codepen](https://codepen.io/timtech/pen/ez
 
 Adding an event listener for radio buttons came from [Telusko](https://www.youtube.com/watch?v=r3Oc4IUP0XI)
 
+Adding an image element to the DOM [Stackoverflow](https://stackoverflow.com/questions/7802744/adding-an-img-element-to-a-div-with-javascript)
+
+Code for changing the image source in JS came from [DelftStack](https://www.delftstack.com/howto/javascript/change-image-src-javascript/#:~:text=Change%20the%20Source%20of%20an,image%20using%20the%20src%20property.)
+
 ### Media
 - All artwork created by me.
