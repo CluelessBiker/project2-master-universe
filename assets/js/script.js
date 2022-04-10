@@ -16,7 +16,7 @@ function dayNight(event){
     } else if (neutral.checked){
         document.getElementById("defaultImage").src='assets/images/images-artwork/emptyspace.png';
     } else {
-        alert("Hey! You got it right! :D");
+    
     }
 }
 
@@ -85,20 +85,32 @@ document.getElementById("submit-button'").addEventListener("keydown", function(e
     if (event.key === "Enter") {
         finalTally();
     };
-})    
+});
 
 function finalTally(event){
     let night = document.getElementById("night");
     let chaos = document.getElementById("chaos");
     let nature = document.getElementById("nature");
     
-    if (night.checked === chaos.checked === nature.checked){
+    if (night.checked & chaos.checked & nature.checked){
         alert("Congratulations, you wiped out humanity!");
     } else {
         alert("well y'all did somthing...");
     }
     
+};
 
-}
+let resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', "resetGame");
+
+function resetGame(event){
+    // let ndDelete = document.getElementById("defaultImage");
+    // ndDelete.innerHTML = "";
+    // let ccDelete = document.getElementById("calmChaosOverlay");
+    // ccDelete.innerHTML = "";
+    // let ncDelete = document.getElementById("natureCivilisationOverlay");
+    // ncDelete.innerHTML = "";
+    alert("well y'all did somthing...");
+};
 
 });

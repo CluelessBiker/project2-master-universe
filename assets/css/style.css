@@ -30,13 +30,13 @@ h3, p{
 #pageTitle h1{
     text-transform:uppercase;
     font-size:5vw;
-    padding:10px;
+    /* padding:10px; */
 }
 
 #pageTitle h2{
     text-transform:lowercase;
-    font-size:4vw;
-    padding-bottom:10px;
+    font-size:3vw;
+    /* padding-bottom:10px; */
 }
 
 /* Interactive drawing frame in place */
@@ -115,7 +115,6 @@ h3, p{
     bottom: 0;
     left: 0;
     right: 0;
-    /* background: #B5DAA5; */
 }
 
 .left-position:checked ~ span .label1,
@@ -131,7 +130,6 @@ h3, p{
 .slider-ball {
     width: 1em;
     height: 1em;
-    /* margin: 2px; */
     border-radius:50%;
     position: absolute;
     display: inline-block;
@@ -141,8 +139,8 @@ h3, p{
     left: 0;
     right: 0;
     background-color:rgb(7, 7, 74);
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: .7s;
+    transition: .7s;
 }
   
 .neutral-position:checked ~ span .slider-ball {
@@ -157,13 +155,13 @@ h3, p{
     transform: translateX(2em);
 }
 
-/* Submit button */
+/* Submit & reset button */
 #game-area{
     text-align:center;
     width:100%;
 }
 
-#submit-button{
+#submit-button, #reset-button{
     font-size:150%;
     text-transform:uppercase;
     font-family: 'Rubik Wet Paint', cursive;
@@ -173,9 +171,10 @@ h3, p{
     text-align:center;
     background-color:rgb(7, 7, 74);
     color:#B5DAA5;
+    width:120px;
 }
 
-#submit-button:hover{
+#submit-button:hover, #reset-button:hover{
     background-color:#B5DAA5;
     color:rgb(7, 7, 74);
 }
