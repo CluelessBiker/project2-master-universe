@@ -38,10 +38,13 @@ function calmChaos(event){
     document.getElementById("calmChaosOverlay").appendChild(img);
 
     if (calm.checked) {
+        img.remove();
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/calm.png';
     } else if (chaos.checked){
+        img.remove();
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/chaos.png';
     } else if (neutral2.checked){
+        img.remove();
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/emptyspace.png';
     } else {
         // alert("Hey! You got it right! :D");
