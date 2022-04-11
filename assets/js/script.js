@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-});
+
 
 // function for first set of radio buttons : day/night
 let firstToggle = document.getElementById("toggleDayNight")
@@ -41,8 +41,8 @@ function calmChaos(event){
     // let neutral2 = document.getElementById("calm-chaos");
     // let chaos = document.getElementById("chaos");
 
-    let testDelete = document.getElementById("calmChaosOverlay");
-    testDelete.innerHTML = "";
+    let cleanSlate = document.getElementById("calmChaosOverlay");
+    cleanSlate.innerHTML = "";
 
     let img = document.createElement('img');
     img.id = "calmChaosImage";
@@ -70,8 +70,8 @@ function natureCivilisation(event){
     // let neutral3 = document.getElementById("nature-civilisation");
     // let civilisation = document.getElementById("civilisation");
 
-    let testDelete = document.getElementById("natureCivilisationOverlay");
-    testDelete.innerHTML = "";
+    let cleanSlate = document.getElementById("natureCivilisationOverlay");
+    cleanSlate.innerHTML = "";
 
     let img = document.createElement('img');
     img.alt = "Nature or Civilisation";
@@ -107,7 +107,7 @@ function finalTally(event){
     if (night.checked & chaos.checked & nature.checked){
         alert("Congratulations, you wiped out humanity!");
     } else {
-        alert("well y'all did somthing...");
+        alert("nu uh. Wrong combo. Try again.");
     } 
 }
 
@@ -115,12 +115,27 @@ let resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', resetGame);
 
 function resetGame(event){
-    let ndDelete = document.getElementById("defaultImage");
-    ndDelete.innerHTML = "";
-    let ccDelete = document.getElementById("calmChaosOverlay");
-    ccDelete.innerHTML = "";
-    let ncDelete = document.getElementById("natureCivilisationOverlay");
-    ncDelete.innerHTML = "";
-    alert("well y'all did something...");
+    document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.png';
+    alert("I do nothing");
+
+    let cleanSlate = document.getElementById("calmChaosOverlay");
+    cleanSlate.innerHTML = "";
+
+    let img = document.createElement('img');
+    img.id = "calmChaosImage";
+    img.alt = "Calm or Chaos";
+    document.getElementById("calmChaosOverlay").appendChild(img);
+    document.getElementById("calmChaosImage").src='assets/images/images-artwork/emptyspace.png';
+
+    let cleanSlateTwo = document.getElementById("natureCivilisationOverlay");
+    cleanSlateTwo.innerHTML = "";
+
+    let imgTwo = document.createElement('img');
+    imgTwo.alt = "Nature or Civilisation";
+    imgTwo.id = "natureCivilisationImage";
+    document.getElementById("natureCivilisationOverlay").appendChild(img);
+    document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
 }
+
+});
 
