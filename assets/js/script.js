@@ -1,20 +1,32 @@
 document.addEventListener("DOMContentLoaded", function() {
+});
 
 // function for first set of radio buttons : day/night
 let firstToggle = document.getElementById("toggleDayNight")
 firstToggle.addEventListener('click', dayNight);
 
+// targetting radio buttons
+let day = document.getElementById("day");
+let neutral = document.getElementById("day-night");
+let night = document.getElementById("night");
+let calm = document.getElementById("calm");
+let neutral2 = document.getElementById("calm-chaos");
+let chaos = document.getElementById("chaos");
+let nature = document.getElementById("nature");
+let neutral3 = document.getElementById("nature-civilisation");
+let civilisation = document.getElementById("civilisation");
+
 function dayNight(event){
-    let day = document.getElementById("day");
-    let neutral = document.getElementById("day-night");
-    let night = document.getElementById("night");
+    // let day = document.getElementById("day");
+    // let neutral = document.getElementById("day-night");
+    // let night = document.getElementById("night");
 
     if (day.checked) {
         document.getElementById("defaultImage").src='assets/images/images-artwork/day.jpg';
     } else if (night.checked){
         document.getElementById("defaultImage").src='assets/images/images-artwork/night.jpg';
     } else if (neutral.checked){
-        document.getElementById("defaultImage").src='assets/images/images-artwork/emptyspace.png';
+        document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.png';
     } else {
     
     }
@@ -25,9 +37,9 @@ let secondToggle = document.getElementById("toggleCalmChaos")
 secondToggle.addEventListener('click', calmChaos);
 
 function calmChaos(event){
-    let calm = document.getElementById("calm");
-    let neutral2 = document.getElementById("calm-chaos");
-    let chaos = document.getElementById("chaos");
+    // let calm = document.getElementById("calm");
+    // let neutral2 = document.getElementById("calm-chaos");
+    // let chaos = document.getElementById("chaos");
 
     let testDelete = document.getElementById("calmChaosOverlay");
     testDelete.innerHTML = "";
@@ -54,9 +66,9 @@ let thirdToggle = document.getElementById("toggleNatureCivilisation")
 thirdToggle.addEventListener('click', natureCivilisation);
 
 function natureCivilisation(event){
-    let nature = document.getElementById("nature");
-    let neutral3 = document.getElementById("nature-civilisation");
-    let civilisation = document.getElementById("civilisation");
+    // let nature = document.getElementById("nature");
+    // let neutral3 = document.getElementById("nature-civilisation");
+    // let civilisation = document.getElementById("civilisation");
 
     let testDelete = document.getElementById("natureCivilisationOverlay");
     testDelete.innerHTML = "";
@@ -81,36 +93,34 @@ function natureCivilisation(event){
 let submit = document.getElementById('submit-button');
 submit.addEventListener('click', finalTally);
 
-document.getElementById("submit-button'").addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        finalTally();
-    };
-});
+addEventListener("keydown", function(event) {
+    if (event.key === "enter") {
+        submit.addEventListener('click', finalTally());
+    }
+})
 
 function finalTally(event){
-    let night = document.getElementById("night");
-    let chaos = document.getElementById("chaos");
-    let nature = document.getElementById("nature");
+    // let night = document.getElementById("night");
+    // let chaos = document.getElementById("chaos");
+    // let nature = document.getElementById("nature");
     
     if (night.checked & chaos.checked & nature.checked){
         alert("Congratulations, you wiped out humanity!");
     } else {
         alert("well y'all did somthing...");
-    }
-    
-};
+    } 
+}
 
 let resetButton = document.getElementById('reset-button');
-resetButton.addEventListener('click', "resetGame");
+resetButton.addEventListener('click', resetGame);
 
 function resetGame(event){
-    // let ndDelete = document.getElementById("defaultImage");
-    // ndDelete.innerHTML = "";
-    // let ccDelete = document.getElementById("calmChaosOverlay");
-    // ccDelete.innerHTML = "";
-    // let ncDelete = document.getElementById("natureCivilisationOverlay");
-    // ncDelete.innerHTML = "";
-    alert("well y'all did somthing...");
-};
+    let ndDelete = document.getElementById("defaultImage");
+    ndDelete.innerHTML = "";
+    let ccDelete = document.getElementById("calmChaosOverlay");
+    ccDelete.innerHTML = "";
+    let ncDelete = document.getElementById("natureCivilisationOverlay");
+    ncDelete.innerHTML = "";
+    alert("well y'all did something...");
+}
 
-});
