@@ -15,10 +15,15 @@ let civilisation = document.getElementById("civilisation");
 let winMessage = document.getElementById("win-message");
 let loseMessage = document.getElementById("lose-message");
 
-// function for first set of radio buttons : day/night
+// Event listener for third set of toggles : day/night
 let firstToggle = document.getElementById("toggleDayNight");
 firstToggle.addEventListener('click', dayNight);
 
+/**
+ * Function to determine if the sceen will be Day/Neutral/Night
+ * Verifies which radio button is selected.
+ * Calls forth the correct image to be displayed
+ */
 function dayNight(event){
     if (day.checked) {
         document.getElementById("defaultImage").src='assets/images/images-artwork/day.jpg';
@@ -29,10 +34,15 @@ function dayNight(event){
     } 
 }
 
-// function for second set of radio buttons : calm/chaos
+// Event listener for third set of toggles : calm/chaos
 let secondToggle = document.getElementById("toggleCalmChaos");
 secondToggle.addEventListener('click', calmChaos);
 
+/**
+ * Function to determine if the sceen will be Calm/Neutral/Chaos
+ * Verifies which radio button is selected.
+ * Calls forth the correct image to be displayed
+ */
 function calmChaos(event){
     if (calm.checked) {
         document.getElementById("firstOverlay").src='assets/images/images-artwork/calm.png';
@@ -43,10 +53,15 @@ function calmChaos(event){
     } 
 }
 
-// function for third set of radio buttons : nature/civilisation
+// Event listener for third set of toggles : nature/civilisation
 let thirdToggle = document.getElementById("toggleNatureCivilisation");
 thirdToggle.addEventListener('click', natureCivilisation);
 
+/**
+ * Function to determine if the sceen will be Nature/Neutral/Civilisation
+ * Verifies which radio button is selected.
+ * Calls forth the correct image to be displayed
+ */
 function natureCivilisation(event){
     if (nature.checked) {
         document.getElementById("secondOverlay").src='assets/images/images-artwork/nature.png';
@@ -57,7 +72,7 @@ function natureCivilisation(event){
     } 
 }
 
-// Tallying the results to see if the universe is doomed.
+// Event listeners for the 'Submit' button.
 let submit = document.getElementById('submit-button');
 submit.addEventListener('click', finalTally);
 
@@ -67,23 +82,31 @@ addEventListener("keydown", function(event) {
     }
 });
 
+/**
+ * Check the combination of images to tally the if the game is won or lost.
+ * A win/lose message is displayed upon completion.
+ */
 function finalTally(event){
     if (night.checked && chaos.checked && nature.checked){
-        // alert("Congratulations, you wiped out humanity!");
         winMessage.style.display = "block";
 
         let winGraphic = document.getElementById("game-area");
         winGraphic.style.backgroundImage = "url('assets/images/images-artwork/winscreen.png')";
         winGraphic.style.backgroundPosition = 'center center';
-
     } else {
         loseMessage.style.display = "block";
     } 
 }
 
+// Event listener for the 'Reset' button.
 let resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', resetGame);
 
+/**
+ * Button configuration to reset the game back to the starting point. 
+ * Clears win/lose message.
+ * Clears win screen background 
+ */
 function resetGame(event){
     neutral.checked = true;
     neutral2.checked = true;
