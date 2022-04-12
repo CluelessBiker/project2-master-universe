@@ -1,8 +1,9 @@
 # Master of the Universe
+Master of the Universe is an interactive site that turns art into a game. By selecting the correct combination of images, the user is greeted with either a win screen with vibrant colours designed to bring joy, or a lose screen that asks them to try again. In this way, the user is given the chance to build up the drawing as they like.
 
-![Site view across devices]()
+![Site view across devices](assets/images/images-readme/responsive-design.png)
 
-The Master of the Universe site is live, the link to which can be found [HERE](https://cluelessbiker.github.io/project2-master-universe/index.html)
+The Master of the Universe site is live, the links can be found [HERE](https://cluelessbiker.github.io/project2-master-universe/index.html)
 
 ## Tabel of Contents
 + [UX](#ux "UX")
@@ -35,46 +36,65 @@ The Master of the Universe site is live, the link to which can be found [HERE](h
 The design of an interactive little challenge that is meant to involve the user in creating the final art project. There is only one right answer though, and this will be revealed upon the right combination of switches being engaged. Upon which, a new background will load accompanied by a congratulatory message.
 
 ### Site Goal:
+To engage the users interests with vibrant design & fun images, and to keep them coming back to try again. 
 
 ### Audience:
+Anyone & everyone with time to spare. The ideal user age is between 15-30 years of age.
 
 ### Communication:
+With bold text & clearly defined buttons, the instructions of the game become clear upon visiting the site.
 
 ### Current User Goals:
+To keep the user interested & engaged, trying again & again to get the correct combination of switches. With three switches, & three positions for each switch, the number of possible combinations is 27. 
 
 ### New User Goals:
+To become instantly engaged with the design of the site, and feel intrigued to play along.
+
+### Future Goals:
+To add additional interactive playing fields so that the user can choose from a number of different scenarioes. As well as to add the option to increase the level of difficulty.
 
 ## Design
 
 ### Wireframes:
-![Desktop wireframe](/assets/images/images-readme/wireframe-fullscreen.png)
-![Smartphone wireframe](/assets/images/images-readme/wireframe-smartphone.png)
+![Desktop wireframe](assets/images/images-readme/wireframe-fullscreen.png)
+![Smartphone wireframe](assets/images/images-readme/wireframe-smartphone.png)
 
 ### Colour Scheme:
+Two colours were used in the creation of this site. The green tone matches the same green used in the default image of the planet Earth, and was used to tie the imagery to the text. A dark blue was also used, and chosen to mimic the imagined hue of the universe. The rest of the colours come from the images themselves, with additional colour being thrown at the user in a beautiful rainbow upon game win.
+![Colour Palette](assets/images/images-readme/colour-palette.png)
 
 ### Typography:
 All fonts were obtained from the Google Fonts librabry. I chose the following three fonts for the page:
 1. Rubik Moonrocks - This is the main heading font, and it resembles the universe. It felt fitting to the design.
 2. Kanit - for the tagline. I wanted it to be easy to read.
-3. Grape Nuts - for the labels of the toggle switches & footer text. As it looks handwritten, it fits with the feel of the doodle/drawing that can be manipulated.
-4. Rubik Wet Paint - To give an eirie feel to the submit button.
+3. Grape Nuts - for the labels of the toggle switches & footer text. As it looks handwritten, it fits with the feel of the doodle/drawing that can be manipulated. It has also been used in the win/lose messages.
+4. Rubik Wet Paint - To give an eirie feel to the submit & reset buttons.
 
 ### Imagery:
 
 ## Features
 
-### Existing Features
+### Existing Features:
 
 #### Landing Page:
+![Landing Page]()
 
 #### Page Title:
+![Page Heading & Tagline]()
 
 #### Interactive image & toggle buttons:
+![Game screen & toggle switches]()
 
-#### Submit button:
+#### Win Screen:
+![Win Screen]()
+
+#### Lose Screen:
+![Lose Screen]()
+
+#### Submit & Reset Buttons:
+![Submit & Reset buttons]()
 
 #### Social Links:
-
 ![Social Links]()
 
 
@@ -114,6 +134,7 @@ All fonts were obtained from the Google Fonts librabry. I chose the following th
 - Balsamiq - were used to create mockups of the project prior to starting.
 - Am I Responsive? - to ensure the project looked good across all devices.
 - Favicon - to provide the code & image for the icon in the tab bar.
+- Adobe Illustrator - to create the interactive artwork.
 
 ## Deployment
 The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -136,6 +157,8 @@ Adding an image element to the DOM [Stackoverflow](https://stackoverflow.com/que
 Code for changing the image source in JS came from [DelftStack](https://www.delftstack.com/howto/javascript/change-image-src-javascript/#:~:text=Change%20the%20Source%20of%20an,image%20using%20the%20src%20property.)
 
 [StackOverflow](https://stackoverflow.com/questions/21166860/check-a-radio-button-with-javascript) showed me how to change which radio button is checked through JS.
+
+Instructions for adding a backround image came from [W3Schools](https://www.w3schools.com/jsref/prop_style_backgroundimage.asp), as well as how to add background positioning [W3Schools](https://www.w3schools.com/jsref/prop_style_backgroundposition.asp)
 
 ### Media
 - All artwork created by me.

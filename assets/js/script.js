@@ -121,7 +121,6 @@ function resetGame(event){
 
     let winGraphic = document.getElementById("game-area");
     winGraphic.style.backgroundImage = "url('')";
-
 }
 
 });
