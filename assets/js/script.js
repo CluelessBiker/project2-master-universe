@@ -11,6 +11,9 @@ let nature = document.getElementById("nature");
 let neutral3 = document.getElementById("nature-civilisation");
 let civilisation = document.getElementById("civilisation");
 
+// win/lose screen variables
+let loseMessage = document.getElementById("lose-message");
+
 // function for first set of radio buttons : day/night
 let firstToggle = document.getElementById("toggleDayNight")
 firstToggle.addEventListener('click', dayNight);
@@ -26,9 +29,7 @@ function dayNight(event){
         document.getElementById("defaultImage").src='assets/images/images-artwork/night.jpg';
     } else if (neutral.checked){
         document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.png';
-    } else {
-    
-    }
+    } 
 }
 
 // function for second set of radio buttons : calm/chaos
@@ -55,9 +56,7 @@ function calmChaos(event){
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/chaos.png';
     } else if (neutral2.checked){
         document.getElementById("calmChaosImage").src='assets/images/images-artwork/defaultimage.png';
-    } else {
-        // alert("Hey! You got it right! :D");
-    }
+    } 
 }
 
 // function for third set of radio buttons : nature/civilisation
@@ -83,9 +82,7 @@ function natureCivilisation(event){
         document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/civilisation.png';
     } else if (neutral3.checked){
         document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
-    } else {
-        // alert("Hey! You got it right! :D");
-    }
+    } 
 }
 
 // Tallying the results to see if the universe is doomed.
@@ -106,7 +103,9 @@ function finalTally(event){
     if (night.checked & chaos.checked & nature.checked){
         alert("Congratulations, you wiped out humanity!");
     } else {
-        alert("nu uh. Wrong combo. Try again.");
+        // alert("nu uh. Wrong combo. Try again.");
+        loseMessage.style.display = "block";
+        alert("nope. try again");
     } 
 }
 
@@ -134,6 +133,8 @@ function resetGame(event){
     imgTwo.id = "natureCivilisationImage";
     document.getElementById("natureCivilisationOverlay").appendChild(img);
     document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
+
+    loseMessage.style.display = "none";
 }
 
 });
