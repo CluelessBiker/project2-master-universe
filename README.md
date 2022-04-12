@@ -89,7 +89,8 @@ All fonts were obtained from the Google Fonts librabry. I chose the following th
 
 ### Validator Testing
 - html files pass through the [W3C validator](https://validator.w3.org/) with no issues found.
-- html files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
+- CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
+- JS files pass through [JSHint](https://jshint.com/) with no issues found.
 - page has an excellent Accessibility rating in Lighthouse
 
 ![Accessibility score]()

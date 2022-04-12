@@ -16,7 +16,7 @@ let winMessage = document.getElementById("win-message");
 let loseMessage = document.getElementById("lose-message");
 
 // function for first set of radio buttons : day/night
-let firstToggle = document.getElementById("toggleDayNight")
+let firstToggle = document.getElementById("toggleDayNight");
 firstToggle.addEventListener('click', dayNight);
 
 function dayNight(event){
@@ -30,7 +30,7 @@ function dayNight(event){
 }
 
 // function for second set of radio buttons : calm/chaos
-let secondToggle = document.getElementById("toggleCalmChaos")
+let secondToggle = document.getElementById("toggleCalmChaos");
 secondToggle.addEventListener('click', calmChaos);
 
 function calmChaos(event){
@@ -44,7 +44,7 @@ function calmChaos(event){
 }
 
 // function for third set of radio buttons : nature/civilisation
-let thirdToggle = document.getElementById("toggleNatureCivilisation")
+let thirdToggle = document.getElementById("toggleNatureCivilisation");
 thirdToggle.addEventListener('click', natureCivilisation);
 
 function natureCivilisation(event){
@@ -65,15 +65,15 @@ addEventListener("keydown", function(event) {
     if (event.key === "enter") {
         submit.addEventListener('click', finalTally());
     }
-})
+});
 
 function finalTally(event){
-    if (night.checked & chaos.checked & nature.checked){
+    if (night.checked && chaos.checked && nature.checked){
         // alert("Congratulations, you wiped out humanity!");
         winMessage.style.display = "block";
 
         let winGraphic = document.getElementById("game-area");
-        winGraphic.style.backgroundImage = "url('assets/images/images-artwork/winscreen.png')"
+        winGraphic.style.backgroundImage = "url('assets/images/images-artwork/winscreen.png')";
         winGraphic.style.backgroundPosition = 'center center';
 
     } else {
@@ -97,7 +97,7 @@ function resetGame(event){
     loseMessage.style.display = "none";
 
     let winGraphic = document.getElementById("game-area");
-    winGraphic.style.backgroundImage = "url('')"
+    winGraphic.style.backgroundImage = "url('')";
 
 }
 
