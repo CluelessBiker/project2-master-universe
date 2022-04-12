@@ -232,3 +232,40 @@ footer{
 #social-links i:hover{
     color:#B5DAA5;
 }
+
+@media screen and (max-width:600px){
+
+    /* Page title & tag line */
+    #pageTitle h1{
+        font-size:200%;
+    }
+
+    #pageTitle h2{
+        font-size:100%;
+    }
+    
+    /* image area & overlays */
+    #image-area{
+        width:300px;
+        height:300px;
+    }
+    
+    #calmChaosOverlay img{
+        top: -304px;
+    } 
+    
+    #natureCivilisationOverlay img{
+        top: -609px;
+    }
+
+    /* Submit/Reset buttons */
+    #submit-button, #reset-button{
+        font-size:100%;
+        width:100px;
+    }
+
+    /* Win/lose screen */
+    #win-message, #lose-message{
+        top: -832px;
+    }
+}
