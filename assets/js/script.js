@@ -71,6 +71,11 @@ function finalTally(event){
     if (night.checked & chaos.checked & nature.checked){
         // alert("Congratulations, you wiped out humanity!");
         winMessage.style.display = "block";
+
+        let winGraphic = document.getElementById("game-area");
+        winGraphic.style.backgroundImage = "url('assets/images/images-artwork/winscreen.png')"
+        winGraphic.style.backgroundPosition = '100%';
+
     } else {
         loseMessage.style.display = "block";
     } 
