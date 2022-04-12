@@ -179,6 +179,24 @@ h3, p{
     color:rgb(7, 7, 74);
 }
 
+/* Win/lose screen */
+#lose-message{
+    z-index:7;
+    display:block;
+    color:rgb(7, 7, 74);
+    text-align:center;
+    position:relative;
+    top: -260px;
+    padding:0;
+    margin:0 auto;
+}
+
+#lose-message h2{
+    font-family:'Grape Nuts', cursive;
+    font-size:7vw;
+    text-transform:uppercase;
+}
+
 /* Footer styling - taken from my last project & modified slightly. */
 footer{
     width:90%;

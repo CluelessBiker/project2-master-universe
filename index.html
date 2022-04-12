@@ -32,13 +32,20 @@
             </div>
             <div id="calmChaosOverlay"></div>
             <div id="natureCivilisationOverlay"></div>
+            <!-- Lose message -->
+            <div id="lose-message">
+            <h2>Try<br>Again!</h2>
+            </div>
         </div>
 
+        
+
+        
         <!-- Code originated from https://codepen.io/timtech/pen/ezRamp -->
         <div id="toggle-switches">
             <div id="toggleDayNight" class="toggleSwitch">
                 <input type="radio" id="day" class="radio1 left-position" name="toggle-day-night"/>
-                <input type="radio" id="day-night" class="radio2 neutral-position" name="toggle-day-night" />
+                <input type="radio" id="day-night" class="radio2 neutral-position" name="toggle-day-night" checked/>
                 <input type="radio" id="night" class="radio3 right-position" name="toggle-day-night" />
                 <div class="topLabelContainer">
                     <label class="labelTop1" for="day">day</label>
@@ -55,7 +62,7 @@
 
             <div id="toggleCalmChaos" class="toggleSwitch">
                 <input type="radio" id="calm" class="left-position" name="toggle-calm-chaos"/>
-                <input type="radio" id="calm-chaos" class="neutral-position" name="toggle-calm-chaos" />
+                <input type="radio" id="calm-chaos" class="neutral-position" name="toggle-calm-chaos" checked/>
                 <input type="radio" id="chaos" class="right-position" name="toggle-calm-chaos" />
                 <div class="topLabelContainer">
                     <label class="labelTop1" for="calm">calm</label>
@@ -72,7 +79,7 @@
 
             <div id="toggleNatureCivilisation" class="toggleSwitch">
                 <input type="radio" id="nature" class="left-position" name="toggle-nature-civilisation"/>
-                <input type="radio" id="nature-civilisation" class="neutral-position" name="toggle-nature-civilisation" />
+                <input type="radio" id="nature-civilisation" class="neutral-position" name="toggle-nature-civilisation" checked/>
                 <input type="radio" id="civilisation" class="right-position" name="toggle-nature-civilisation" />
                 <div class="topLabelContainer">
                     <label class="labelTop1" for="nature">nature</label>

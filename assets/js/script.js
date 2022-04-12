@@ -1,11 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
 
-
-// function for first set of radio buttons : day/night
-let firstToggle = document.getElementById("toggleDayNight")
-firstToggle.addEventListener('click', dayNight);
-
-// targetting radio buttons
+// targetting radio buttons to call within the functions.
 let day = document.getElementById("day");
 let neutral = document.getElementById("day-night");
 let night = document.getElementById("night");
@@ -15,6 +10,10 @@ let chaos = document.getElementById("chaos");
 let nature = document.getElementById("nature");
 let neutral3 = document.getElementById("nature-civilisation");
 let civilisation = document.getElementById("civilisation");
+
+// function for first set of radio buttons : day/night
+let firstToggle = document.getElementById("toggleDayNight")
+firstToggle.addEventListener('click', dayNight);
 
 function dayNight(event){
     // let day = document.getElementById("day");
