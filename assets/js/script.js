@@ -74,7 +74,7 @@ function finalTally(event){
 
         let winGraphic = document.getElementById("game-area");
         winGraphic.style.backgroundImage = "url('assets/images/images-artwork/winscreen.png')"
-        winGraphic.style.backgroundPosition = '100%';
+        winGraphic.style.backgroundPosition = 'center center';
 
     } else {
         loseMessage.style.display = "block";
