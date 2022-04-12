@@ -11,15 +11,14 @@ let nature = document.getElementById("nature");
 let neutral3 = document.getElementById("nature-civilisation");
 let civilisation = document.getElementById("civilisation");
 
+// win/lose screen variables
+let loseMessage = document.getElementById("lose-message");
+
 // function for first set of radio buttons : day/night
 let firstToggle = document.getElementById("toggleDayNight")
 firstToggle.addEventListener('click', dayNight);
 
 function dayNight(event){
-    // let day = document.getElementById("day");
-    // let neutral = document.getElementById("day-night");
-    // let night = document.getElementById("night");
-
     if (day.checked) {
         document.getElementById("defaultImage").src='assets/images/images-artwork/day.jpg';
     } else if (night.checked){
@@ -38,21 +37,28 @@ function calmChaos(event){
     // let neutral2 = document.getElementById("calm-chaos");
     // let chaos = document.getElementById("chaos");
 
-    let cleanSlate = document.getElementById("calmChaosOverlay");
-    cleanSlate.innerHTML = "";
+    // let cleanSlate = document.getElementById("calmChaosOverlay");
+    // cleanSlate.innerHTML = "";
 
-    let img = document.createElement('img');
-    img.id = "calmChaosImage";
-    img.alt = "Calm or Chaos";
-    document.getElementById("calmChaosOverlay").appendChild(img);
+    // let img = document.createElement('img');
+    // img.id = "calmChaosImage";
+    // img.alt = "Calm or Chaos";
+    // document.getElementById("calmChaosOverlay").appendChild(img);
 
 
+    // if (calm.checked) {
+    //     document.getElementById("calmChaosImage").src='assets/images/images-artwork/calm.png';
+    // } else if (chaos.checked){
+    //     document.getElementById("calmChaosImage").src='assets/images/images-artwork/chaos.png';
+    // } else if (neutral2.checked){
+    //     document.getElementById("calmChaosImage").src='assets/images/images-artwork/defaultimage.png';
+    // } 
     if (calm.checked) {
-        document.getElementById("calmChaosImage").src='assets/images/images-artwork/calm.png';
+        document.getElementById("firstOverlay").src='assets/images/images-artwork/calm.png';
     } else if (chaos.checked){
-        document.getElementById("calmChaosImage").src='assets/images/images-artwork/chaos.png';
+        document.getElementById("firstOverlay").src='assets/images/images-artwork/chaos.png';
     } else if (neutral2.checked){
-        document.getElementById("calmChaosImage").src='assets/images/images-artwork/defaultimage.png';
+        document.getElementById("firstOverlay").src='assets/images/images-artwork/defaultimage.png';
     } 
 }
 
@@ -65,20 +71,28 @@ function natureCivilisation(event){
     // let neutral3 = document.getElementById("nature-civilisation");
     // let civilisation = document.getElementById("civilisation");
 
-    let cleanSlate = document.getElementById("natureCivilisationOverlay");
-    cleanSlate.innerHTML = "";
+    // let cleanSlate = document.getElementById("natureCivilisationOverlay");
+    // cleanSlate.innerHTML = "";
 
-    let img = document.createElement('img');
-    img.alt = "Nature or Civilisation";
-    img.id = "natureCivilisationImage";
-    document.getElementById("natureCivilisationOverlay").appendChild(img);
+    // let img = document.createElement('img');
+    // img.alt = "Nature or Civilisation";
+    // img.id = "natureCivilisationImage";
+    // document.getElementById("natureCivilisationOverlay").appendChild(img);
+
+    // if (nature.checked) {
+    //     document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/nature.png';
+    // } else if (civilisation.checked){
+    //     document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/civilisation.png';
+    // } else if (neutral3.checked){
+    //     document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
+    // } 
 
     if (nature.checked) {
-        document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/nature.png';
+        document.getElementById("secondOverlay").src='assets/images/images-artwork/nature.png';
     } else if (civilisation.checked){
-        document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/civilisation.png';
+        document.getElementById("secondOverlay").src='assets/images/images-artwork/civilisation.png';
     } else if (neutral3.checked){
-        document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
+        document.getElementById("secondOverlay").src='assets/images/images-artwork/emptyspace.png';
     } 
 }
 
@@ -97,8 +111,7 @@ function finalTally(event){
     // let chaos = document.getElementById("chaos");
     // let nature = document.getElementById("nature");
 
-    // win/lose screen variables
-    let loseMessage = document.getElementById("lose-message");
+    
     
     if (night.checked & chaos.checked & nature.checked){
         alert("Congratulations, you wiped out humanity!");
@@ -120,24 +133,25 @@ function resetGame(event){
     neutral3.checked = true;
 
     document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.png';
+    document.getElementById("firstOverlay").src='assets/images/images-artwork/defaultimage.png';
+    document.getElementById("secondOverlay").src='assets/images/images-artwork/emptyspace.png';
+    // let cleanSlate = document.getElementById("calmChaosOverlay");
+    // cleanSlate.innerHTML = "";
 
-    let cleanSlate = document.getElementById("calmChaosOverlay");
-    cleanSlate.innerHTML = "";
+    // let img = document.createElement('img');
+    // img.id = "calmChaosImage";
+    // img.alt = "Calm or Chaos";
+    // document.getElementById("calmChaosOverlay").appendChild(img);
+    // document.getElementById("calmChaosImage").src='assets/images/images-artwork/emptyspace.png';
 
-    let img = document.createElement('img');
-    img.id = "calmChaosImage";
-    img.alt = "Calm or Chaos";
-    document.getElementById("calmChaosOverlay").appendChild(img);
-    document.getElementById("calmChaosImage").src='assets/images/images-artwork/emptyspace.png';
+    // let cleanSlateTwo = document.getElementById("natureCivilisationOverlay");
+    // cleanSlateTwo.innerHTML = "";
 
-    let cleanSlateTwo = document.getElementById("natureCivilisationOverlay");
-    cleanSlateTwo.innerHTML = "";
-
-    let imgTwo = document.createElement('img');
-    imgTwo.alt = "Nature or Civilisation";
-    imgTwo.id = "natureCivilisationImage";
-    document.getElementById("natureCivilisationOverlay").appendChild(img);
-    document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
+    // let imgTwo = document.createElement('img');
+    // imgTwo.alt = "Nature or Civilisation";
+    // imgTwo.id = "natureCivilisationImage";
+    // document.getElementById("natureCivilisationOverlay").appendChild(img);
+    // document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
 
     loseMessage.style.display = "none";
 }
