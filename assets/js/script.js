@@ -12,6 +12,7 @@ let neutral3 = document.getElementById("nature-civilisation");
 let civilisation = document.getElementById("civilisation");
 
 // win/lose screen variables
+let winMessage = document.getElementById("win-message");
 let loseMessage = document.getElementById("lose-message");
 
 // function for first set of radio buttons : day/night
@@ -68,11 +69,10 @@ addEventListener("keydown", function(event) {
 
 function finalTally(event){
     if (night.checked & chaos.checked & nature.checked){
-        alert("Congratulations, you wiped out humanity!");
-        loseMessage.style.display = "none";
+        // alert("Congratulations, you wiped out humanity!");
+        winMessage.style.display = "block";
     } else {
         loseMessage.style.display = "block";
-        console.log(loseMessage)
     } 
 }
 
@@ -88,6 +88,7 @@ function resetGame(event){
     document.getElementById("firstOverlay").src='assets/images/images-artwork/defaultimage.png';
     document.getElementById("secondOverlay").src='assets/images/images-artwork/emptyspace.png';
 
+    winMessage.style.display = "none";
     loseMessage.style.display = "none";
 }
 

@@ -180,7 +180,7 @@ h3, p{
 }
 
 /* Win/lose screen */
-#lose-message{
+#win-message, #lose-message{
     z-index:9999999;
     display:none;
     color:rgb(7, 7, 74);
@@ -190,6 +190,11 @@ h3, p{
     padding:0;
     margin:0 auto;
 }
+
+#win-message h2 {
+    font-family:'Grape Nuts', cursive;
+    font-size:5.3vw;
+} 
 
 #lose-message h2{
     font-family:'Grape Nuts', cursive;
