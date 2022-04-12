@@ -33,26 +33,6 @@ let secondToggle = document.getElementById("toggleCalmChaos")
 secondToggle.addEventListener('click', calmChaos);
 
 function calmChaos(event){
-    // let calm = document.getElementById("calm");
-    // let neutral2 = document.getElementById("calm-chaos");
-    // let chaos = document.getElementById("chaos");
-
-    // let cleanSlate = document.getElementById("calmChaosOverlay");
-    // cleanSlate.innerHTML = "";
-
-    // let img = document.createElement('img');
-    // img.id = "calmChaosImage";
-    // img.alt = "Calm or Chaos";
-    // document.getElementById("calmChaosOverlay").appendChild(img);
-
-
-    // if (calm.checked) {
-    //     document.getElementById("calmChaosImage").src='assets/images/images-artwork/calm.png';
-    // } else if (chaos.checked){
-    //     document.getElementById("calmChaosImage").src='assets/images/images-artwork/chaos.png';
-    // } else if (neutral2.checked){
-    //     document.getElementById("calmChaosImage").src='assets/images/images-artwork/defaultimage.png';
-    // } 
     if (calm.checked) {
         document.getElementById("firstOverlay").src='assets/images/images-artwork/calm.png';
     } else if (chaos.checked){
@@ -67,26 +47,6 @@ let thirdToggle = document.getElementById("toggleNatureCivilisation")
 thirdToggle.addEventListener('click', natureCivilisation);
 
 function natureCivilisation(event){
-    // let nature = document.getElementById("nature");
-    // let neutral3 = document.getElementById("nature-civilisation");
-    // let civilisation = document.getElementById("civilisation");
-
-    // let cleanSlate = document.getElementById("natureCivilisationOverlay");
-    // cleanSlate.innerHTML = "";
-
-    // let img = document.createElement('img');
-    // img.alt = "Nature or Civilisation";
-    // img.id = "natureCivilisationImage";
-    // document.getElementById("natureCivilisationOverlay").appendChild(img);
-
-    // if (nature.checked) {
-    //     document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/nature.png';
-    // } else if (civilisation.checked){
-    //     document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/civilisation.png';
-    // } else if (neutral3.checked){
-    //     document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
-    // } 
-
     if (nature.checked) {
         document.getElementById("secondOverlay").src='assets/images/images-artwork/nature.png';
     } else if (civilisation.checked){
@@ -107,20 +67,12 @@ addEventListener("keydown", function(event) {
 })
 
 function finalTally(event){
-    // let night = document.getElementById("night");
-    // let chaos = document.getElementById("chaos");
-    // let nature = document.getElementById("nature");
-
-    
-    
     if (night.checked & chaos.checked & nature.checked){
         alert("Congratulations, you wiped out humanity!");
         loseMessage.style.display = "none";
     } else {
-        // alert("nu uh. Wrong combo. Try again.");
         loseMessage.style.display = "block";
         console.log(loseMessage)
-        alert("nope. try again");
     } 
 }
 
@@ -135,23 +87,6 @@ function resetGame(event){
     document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.png';
     document.getElementById("firstOverlay").src='assets/images/images-artwork/defaultimage.png';
     document.getElementById("secondOverlay").src='assets/images/images-artwork/emptyspace.png';
-    // let cleanSlate = document.getElementById("calmChaosOverlay");
-    // cleanSlate.innerHTML = "";
-
-    // let img = document.createElement('img');
-    // img.id = "calmChaosImage";
-    // img.alt = "Calm or Chaos";
-    // document.getElementById("calmChaosOverlay").appendChild(img);
-    // document.getElementById("calmChaosImage").src='assets/images/images-artwork/emptyspace.png';
-
-    // let cleanSlateTwo = document.getElementById("natureCivilisationOverlay");
-    // cleanSlateTwo.innerHTML = "";
-
-    // let imgTwo = document.createElement('img');
-    // imgTwo.alt = "Nature or Civilisation";
-    // imgTwo.id = "natureCivilisationImage";
-    // document.getElementById("natureCivilisationOverlay").appendChild(img);
-    // document.getElementById("natureCivilisationImage").src='assets/images/images-artwork/emptyspace.png';
 
     loseMessage.style.display = "none";
 }
