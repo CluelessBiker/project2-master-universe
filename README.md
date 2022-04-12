@@ -85,6 +85,7 @@ All fonts were obtained from the Google Fonts librabry. I chose the following th
 - I struggled to understand how to add an event listener that would also indicate which radio button was toggled. After several hours of trying to understand what I was doing wrong, I contacted C.I. tutor support, and Ger was king enough to show me I had a an errant capital letter in my JS file.
 - Once the functions for all the overlays was in place, it became clear that the third set of toggles caused the image to move places on the screen if the second set of overlays was toggled back & forth. Issue appears to be because the function is creating a new img element each time the button is clicked & appending it to the DOM, causing the relative positioning of the third function to adjust its positioning in comparison. After much trial & error, and the help of Mats, I was able to understand that whilst I was correctly clearing out my div elements, I was placing my code in the wrong order, and clearing out my newly created img elements as well. Repositioning my code resolved the issue.
 - An event listerner for keypress has been added to the submit button. This only appears to function after the submit button has been clicked on once. Prior to that, hitting the 'enter' key produces no results.
+- The "lose message" only appears once when the submit button is clicked. After that, it does nothing.
 
 ### Validator Testing
 - html files pass through the [W3C validator](https://validator.w3.org/) with no issues found.

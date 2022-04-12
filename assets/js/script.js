@@ -102,6 +102,7 @@ function finalTally(event){
     
     if (night.checked & chaos.checked & nature.checked){
         alert("Congratulations, you wiped out humanity!");
+        loseMessage.style.display = "none";
     } else {
         // alert("nu uh. Wrong combo. Try again.");
         loseMessage.style.display = "block";
@@ -113,6 +114,10 @@ let resetButton = document.getElementById('reset-button');
 resetButton.addEventListener('click', resetGame);
 
 function resetGame(event){
+    neutral.checked = true;
+    neutral2.checked = true;
+    neutral3.checked = true;
+    
     document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.png';
     alert("I do nothing");
 
