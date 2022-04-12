@@ -95,6 +95,10 @@ function resetGame(event){
 
     winMessage.style.display = "none";
     loseMessage.style.display = "none";
+
+    let winGraphic = document.getElementById("game-area");
+    winGraphic.style.backgroundImage = "url('')"
+
 }
 
 });
