@@ -181,8 +181,8 @@ h3, p{
 
 /* Win/lose screen */
 #lose-message{
-    z-index:7;
-    display:none;
+    z-index:9999999;
+    display:block;
     color:rgb(7, 7, 74);
     text-align:center;
     position:relative;

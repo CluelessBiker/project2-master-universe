@@ -84,8 +84,8 @@ All fonts were obtained from the Google Fonts librabry. I chose the following th
 - The default page image, along with the favicon were loading in the gitpod preview of the site, however would not load through the link generated in github. A friend suggested that the error lay with my file paths starting with a "/", and that my image name also contained a space. Once the space & the starting "/" were removed, the issue was resolved. Thank you [Mats](https://github.com/Pelikantapeten).
 - I struggled to understand how to add an event listener that would also indicate which radio button was toggled. After several hours of trying to understand what I was doing wrong, I contacted C.I. tutor support, and Ger was king enough to show me I had a an errant capital letter in my JS file.
 - Once the functions for all the overlays was in place, it became clear that the third set of toggles caused the image to move places on the screen if the second set of overlays was toggled back & forth. Issue appears to be because the function is creating a new img element each time the button is clicked & appending it to the DOM, causing the relative positioning of the third function to adjust its positioning in comparison. After much trial & error, and the help of Mats, I was able to understand that whilst I was correctly clearing out my div elements, I was placing my code in the wrong order, and clearing out my newly created img elements as well. Repositioning my code resolved the issue.
-- An event listerner for keypress has been added to the submit button. This only appears to function after the submit button has been clicked on once. Prior to that, hitting the 'enter' key produces no results.
-- The "lose message" only appears once when the submit button is clicked. After that, it does nothing.
+- An event listerner for keypress has been added to the submit button. This only appears to function after the submit button has been clicked on once. Prior to that, hitting the 'enter' key produces no results. Ger from tutor support tested the code & confirmed that the event listener works on page load, and had other colleagues also test it. As I cannot replicate their results on Chrome, even after clearing cache/cookies & doing a hard reset, I will take their word for it.
+- The "lose message" only appears once when the submit button is clicked. After that, it does nothing. Discovered that it was the same issue I had experienced earlier, whereby the creation of the new elements in the JS file when clicked, causes the message to shift positioning. This means that I will need to create empty or default images in the main html file, and rather than creating elements in JS, will just replace existing images. This will ensure the 'lose screen' is in the same place regardless of which combination of toggles have been checked.
 
 ### Validator Testing
 - html files pass through the [W3C validator](https://validator.w3.org/) with no issues found.
@@ -133,6 +133,8 @@ Adding an event listener for radio buttons came from [Telusko](https://www.youtu
 Adding an image element to the DOM [Stackoverflow](https://stackoverflow.com/questions/7802744/adding-an-img-element-to-a-div-with-javascript)
 
 Code for changing the image source in JS came from [DelftStack](https://www.delftstack.com/howto/javascript/change-image-src-javascript/#:~:text=Change%20the%20Source%20of%20an,image%20using%20the%20src%20property.)
+
+[StackOverflow](https://stackoverflow.com/questions/21166860/check-a-radio-button-with-javascript) showed me how to change which radio button is checked through JS.
 
 ### Media
 - All artwork created by me.

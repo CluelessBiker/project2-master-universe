@@ -11,9 +11,6 @@ let nature = document.getElementById("nature");
 let neutral3 = document.getElementById("nature-civilisation");
 let civilisation = document.getElementById("civilisation");
 
-// win/lose screen variables
-let loseMessage = document.getElementById("lose-message");
-
 // function for first set of radio buttons : day/night
 let firstToggle = document.getElementById("toggleDayNight")
 firstToggle.addEventListener('click', dayNight);
@@ -99,6 +96,9 @@ function finalTally(event){
     // let night = document.getElementById("night");
     // let chaos = document.getElementById("chaos");
     // let nature = document.getElementById("nature");
+
+    // win/lose screen variables
+    let loseMessage = document.getElementById("lose-message");
     
     if (night.checked & chaos.checked & nature.checked){
         alert("Congratulations, you wiped out humanity!");
@@ -106,6 +106,7 @@ function finalTally(event){
     } else {
         // alert("nu uh. Wrong combo. Try again.");
         loseMessage.style.display = "block";
+        console.log(loseMessage)
         alert("nope. try again");
     } 
 }
@@ -117,9 +118,8 @@ function resetGame(event){
     neutral.checked = true;
     neutral2.checked = true;
     neutral3.checked = true;
-    
+
     document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.png';
-    alert("I do nothing");
 
     let cleanSlate = document.getElementById("calmChaosOverlay");
     cleanSlate.innerHTML = "";
