@@ -171,6 +171,13 @@ h3, p{
     text-align:center;
     background-color:rgb(7, 7, 74);
     color:#B5DAA5;
+}
+
+#info-button{
+    width:180px;
+}
+
+#submit-button, #reset-button{
     width:120px;
 }
 
@@ -259,9 +266,14 @@ footer{
     }
 
     /* Submit/Reset buttons */
-    #submit-button, #reset-button, #info-button{
+    #submit-button, #reset-button{
         font-size:100%;
         width:100px;
+    }
+
+    #info-button{
+        font-size:100%;
+        width:130px; 
     }
 
     /* Win/lose screen */
