@@ -19,9 +19,33 @@ let civilisation = document.getElementById("civilisation");
 let winMessage = document.getElementById("win-message");
 let loseMessage = document.getElementById("lose-message");
 
-// Event listener for 'How to play' button
+// EVENT LISTENERS:
+// 'How to play' button
 let instructions = document.getElementById("info-button");
 instructions.addEventListener('click', loadInstructions);
+// 'Play now' button
+let playNow = document.getElementById("play-button");
+playNow.addEventListener('click', hideInstructions);
+// First set of toggles : day/night
+let firstToggle = document.getElementById("toggleDayNight");
+firstToggle.addEventListener('click', dayNight);
+// Second set of toggles : calm/chaos
+let secondToggle = document.getElementById("toggleCalmChaos");
+secondToggle.addEventListener('click', calmChaos);
+// Third set of toggles : nature/civilisation
+let thirdToggle = document.getElementById("toggleNatureCivilisation");
+thirdToggle.addEventListener('click', natureCivilisation);
+// 'Submit' button.
+let submit = document.getElementById('submit-button');
+submit.addEventListener('click', finalTally);
+submit.addEventListener("keydown", function(event) {
+    if (event.key === "enter") {
+        submit.addEventListener('click', finalTally());
+    }
+});
+// 'Reset' button.
+let resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', resetGame);
 
 /**
  * Function to load the instructions page
@@ -31,10 +55,6 @@ function loadInstructions(event){
     gameArea.style.display = "none";
 }
 
-// Event listener for 'Play now' button
-let playNow = document.getElementById("play-button");
-playNow.addEventListener('click', hideInstructions);
-
 /**
  * Function to hide the instructions page
  */
@@ -42,10 +62,6 @@ function hideInstructions(event){
     instructionsPanel.style.display = "none";
     gameArea.style.display = "block";
 }
-
-// Event listener for first set of toggles : day/night
-let firstToggle = document.getElementById("toggleDayNight");
-firstToggle.addEventListener('click', dayNight);
 
 /**
  * Function to determine if the sceen will be Day/Neutral/Night
@@ -62,10 +78,6 @@ function dayNight(event){
     } 
 }
 
-// Event listener for second set of toggles : calm/chaos
-let secondToggle = document.getElementById("toggleCalmChaos");
-secondToggle.addEventListener('click', calmChaos);
-
 /**
  * Function to determine if the sceen will be Calm/Neutral/Chaos
  * Verifies which radio button is selected.
@@ -81,10 +93,6 @@ function calmChaos(event){
     } 
 }
 
-// Event listener for third set of toggles : nature/civilisation
-let thirdToggle = document.getElementById("toggleNatureCivilisation");
-thirdToggle.addEventListener('click', natureCivilisation);
-
 /**
  * Function to determine if the sceen will be Nature/Neutral/Civilisation
  * Verifies which radio button is selected.
@@ -99,16 +107,6 @@ function natureCivilisation(event){
         document.getElementById("secondOverlay").src='assets/images/images-artwork/emptyspace.png';
     } 
 }
-
-// Event listeners for the 'Submit' button.
-let submit = document.getElementById('submit-button');
-submit.addEventListener('click', finalTally);
-
-submit.addEventListener("keydown", function(event) {
-    if (event.key === "enter") {
-        submit.addEventListener('click', finalTally());
-    }
-});
 
 /**
  * Check the combination of images to tally the if the game is won or lost.
@@ -135,11 +133,8 @@ function finalTally(event){
     } else {
         loseMessage.style.display = "block";
     } 
+    document.getElementsByClassName("sliderContainer").style.background = "red";
 }
-
-// Event listener for the 'Reset' button.
-let resetButton = document.getElementById('reset-button');
-resetButton.addEventListener('click', resetGame);
 
 /**
  * Button configuration to reset the game back to the starting point. 

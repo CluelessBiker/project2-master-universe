@@ -163,6 +163,8 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 ### Content
 Support was provided by my fellow student & friend [Mats](https://github.com/Pelikantapeten) by aiding me in bouncing off ideas & venting frustrations. They also provided immeasurable support when my brain was too tired to think straight, & helped me to work through my issues with a second set of eyes. I cannot thank them enough for being there for me.
 
+Also a huge thank you to my mentor, Martina T. who went above & beyond to give her time & energy, and was incredibly encouraging.
+
 Code for the radio buttons came from [Codepen](https://codepen.io/timtech/pen/ezRamp).
 
 Adding an event listener for radio buttons came from [Telusko](https://www.youtube.com/watch?v=r3Oc4IUP0XI)

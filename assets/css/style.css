@@ -125,7 +125,7 @@ h3, p{
     position: relative;
     padding: 1px;
     display: inline-block;
-    background: #B5DAA5
+    background: #B5DAA5;
 }
   
 .label1,
@@ -163,10 +163,9 @@ h3, p{
     left: 0;
     right: 0;
     background-color:rgb(7, 7, 74);
-    -webkit-transition: .7s;
-    transition: .7s;
+    transition:all 0.3s ease-in-out;
 }
-  
+
 .neutral-position:checked ~ span .slider-ball {
     -webkit-transform: translateX(1em);
     -ms-transform: translateX(1em);
@@ -245,6 +244,7 @@ footer{
     height:75px;
     margin:0 auto;
     text-align:center;
+    color:rgb(7, 7, 74);
 }
 
 #social-links{
@@ -267,6 +267,10 @@ footer{
 
 #social-links i:hover{
     color:#B5DAA5;
+}
+
+footer p{
+    font-size:1.3em;
 }
 
 @media screen and (max-width:600px){
