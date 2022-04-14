@@ -49,6 +49,17 @@ h3, p{
     padding:50px;
     font-size:2em;
     background-color:whitesmoke;
+    display:none;
+}
+#instructions-panel h2, #instructions-panel p{
+    color:rgb(7, 7, 74);
+}
+
+/* Game area */
+#game-area{
+    text-align:center;
+    width:100%;
+    display:block;
 }
 
 /* Interactive drawing frame in place */
@@ -168,12 +179,6 @@ h3, p{
 }
 
 /* Submit, Reset, Info & Play buttons */
-#game-area{
-    text-align:center;
-    width:100%;
-    display:none;
-}
-
 #submit-button, #reset-button, #info-button, #play-button{
     text-transform:uppercase;
     font-family: 'Rubik Wet Paint', cursive;

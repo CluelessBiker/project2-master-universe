@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
 
+// Load & unload the instrucions panel
+let gameArea = document.getElementById("game-area");
+let instructionsPanel = document.getElementById("instructions-panel");
+
 // targetting radio buttons to call within the functions.
 let day = document.getElementById("day");
 let neutral = document.getElementById("day-night");
@@ -15,7 +19,19 @@ let civilisation = document.getElementById("civilisation");
 let winMessage = document.getElementById("win-message");
 let loseMessage = document.getElementById("lose-message");
 
-// Event listener for third set of toggles : day/night
+// Event listener for 'How to play' button
+let instructions = document.getElementById("info-button");
+instructions.addEventListener('click', loadInstructions);
+
+/**
+ * Function to load the instructions page
+ */
+function loadInstructions(event){
+    instructionsPanel.style.display = "block";
+    gameArea.style.display = "none";
+}
+
+// Event listener for first set of toggles : day/night
 let firstToggle = document.getElementById("toggleDayNight");
 firstToggle.addEventListener('click', dayNight);
 
@@ -34,7 +50,7 @@ function dayNight(event){
     } 
 }
 
-// Event listener for third set of toggles : calm/chaos
+// Event listener for second set of toggles : calm/chaos
 let secondToggle = document.getElementById("toggleCalmChaos");
 secondToggle.addEventListener('click', calmChaos);
 
