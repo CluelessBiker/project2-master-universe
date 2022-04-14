@@ -113,6 +113,8 @@ An event listener for keypress has been added to the submit button. This only ap
 
 The "lose message" only appears once when the submit button is clicked. After that, it does nothing. Discovered that it was the same issue I had experienced earlier, whereby the creation of the new elements in the JS file when clicked, causes the message to shift positioning. To resolve this, I created the img elements in the html file, and loaded them with the default images for the neutral position of each toggle. This ensured that any positioning created in CSS, will no longer be affected by the creation/deletion of new elements. Now, the 'lose screen' loads in the correct place every time.
 
+I was unable to change the background colour of the sliders by calling the element classes, and when trying to do so, this caused an issue with my function & effectively disabled it. I am still uncertain as to why this occurred. This was resolved by creating an id for each of the slider fields, and then calling upon those elements in JS. 
+
 ### Validator Testing
 - html files pass through the [W3C validator](https://validator.w3.org/) with no issues found.
 
@@ -165,7 +167,7 @@ Support was provided by my fellow student & friend [Mats](https://github.com/Pel
 
 Also a huge thank you to my mentor, Martina T. who went above & beyond to give her time & energy, and was incredibly encouraging.
 
-Code for the radio buttons came from [Codepen](https://codepen.io/timtech/pen/ezRamp).
+Code for the HTML radio buttons & how to turn them into a toggle switch through CSS came from [Codepen](https://codepen.io/timtech/pen/ezRamp). A number of modifications were made, however the core structure is entirely credited to Codepen.
 
 Adding an event listener for radio buttons came from [Telusko](https://www.youtube.com/watch?v=r3Oc4IUP0XI)
 
@@ -178,6 +180,8 @@ Code for changing the image source in JS came from [DelftStack](https://www.delf
 Instructions for adding a background image came from [W3Schools](https://www.w3schools.com/jsref/prop_style_backgroundimage.asp), as well as how to add background positioning [W3Schools](https://www.w3schools.com/jsref/prop_style_backgroundposition.asp)
 
 Information on deactivating an event listener after being clicked came from [Alvarotrigo](https://alvarotrigo.com/blog/disable-button-javascript/#:~:text=To%20disable%20a%20button%20using,disabled%20JavaScript%20property%20to%20false%20.), this feature was also implemented on the toggle switches.
+
+Changing the background colour of the toggle switches came from [BobbyHadz](https://bobbyhadz.com/blog/javascript-toggle-element-background-color-on-click).
 
 ### Media
 - All artwork created by me.
