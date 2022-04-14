@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
 
     // Load & unload the instrucions panel
-    // Should use const unless the variable is going to change
+    // Should use const unless the variable is going to change (For all you variable declarations below)
+    // =>
     const gameArea = document.getElementById("game-area");
     // let gameArea = document.getElementById("game-area");
     let instructionsPanel = document.getElementById("instructions-panel");
@@ -88,6 +89,9 @@ document.addEventListener("DOMContentLoaded", function() {
      * Calls forth the correct image to be displayed
      */
     // You've repeated this function 3 times, you should be able to abstract the logic into a helper function and then pass in the assets:
+
+    // =>
+
     function toggleImages(good, neutral, bad, defaultImage, goodAsset, neutralAsset, badAsset){
         if(good.checked){
             document.getElementById(defaultImage).src=goodAsset;
@@ -99,23 +103,30 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     
     // Also, the data for the images could be stored in an object, and then passed in as a parameter to the various functions that need them:
+
+    // =>
+
+
     // let dayNight = {
     //     good: {
-    //         name: 'day',
+    //         element: day, 
     //         asset: 'assets/images/images-artwork/day.jpg'
     //     },
     //     neutral: {
-    //         name: 'neutral',
+    //         element: neutral,
     //         asset: 'assets/images/images-artwork/defaultimage.png'
     //     },
     //     bad: {
-    //         name: 'night',
+    //         element: night,
     //         asset: 'assets/images/images-artwork/night.jpg'
     //     }
     // }
     
     // And then have something like:
-    // toggleImages(dayNight.good, dayNight.neutral, dayNight.bad, "defaultImage", dayNight.good.asset, dayNight.neutral.asset, dayNight.bad.asset);
+
+    // =>
+
+    // toggleImages(dayNight.good.element, dayNight.neutral.element, dayNight.bad.element, "defaultImage", dayNight.good.asset, dayNight.neutral.asset, dayNight.bad.asset);
     
     
     
@@ -197,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function() {
      * Clears win screen background 
      */
     
-    // You could add this to the submit button and get rid of the reset button so that it resets at the same time as submitting.
+    // You could add this to the submit button and get rid of the reset button so that it resets at the same time as submitting?
     function resetGame(event){
         submit.disabled = false;
         day.disabled = false;
