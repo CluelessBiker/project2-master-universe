@@ -129,7 +129,7 @@ function finalTally(event){
     neutral3.disabled = true;
     civilisation.disabled = true;
 
-    sliderOne.style.backgroundColor = "whitesmoke";
+    sliderOne.style.backgroundColor = "grey";
     sliderTwo.style.backgroundColor = "grey";
     sliderThree.style.backgroundColor = "grey";
 
