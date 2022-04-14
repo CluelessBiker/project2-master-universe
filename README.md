@@ -42,7 +42,7 @@ To engage the users interests with vibrant design & fun images, and to keep them
 Anyone & everyone with time to spare. The ideal user age is between 15-30 years of age.
 
 ### Communication:
-With bold text & clearly defined buttons, the instructions of the game become clear upon visiting the site.
+With bold text & clearly defined buttons, the instructions of the game become clear upon visiting the site. However for those who need a little more guidance, an instructions window has also been added, to load upon request.
 
 ### Current User Goals:
 To keep the user interested & engaged, trying again & again to get the correct combination of switches. With three switches, & three positions for each switch, the number of possible combinations is 27. 
@@ -71,49 +71,64 @@ All fonts were obtained from the Google Fonts librabry. I chose the following th
 4. Rubik Wet Paint - To give an eirie feel to the submit & reset buttons.
 
 ### Imagery:
+All images used were created by me, and styled to give it the feel of an interactive colouring book.
 
 ## Features
 
 ### Existing Features:
 
 #### Landing Page:
-![Landing Page]()
+![Landing Page](assets/images/images-readme/landing-page.png)
 
 #### Page Title:
-![Page Heading & Tagline]()
+![Page Heading & Tagline](assets/images/images-readme/header.png)
 
-#### Interactive image & toggle buttons:
-![Game screen & toggle switches]()
+#### Instructions Panel:
+![How to play button](assets/images/images-readme/instructions-button.png)
+![Instructions panel](assets/images/images-readme/instructions-panel.png)
+
+#### Game Area:
+![Game screen & toggle switches](assets/images/images-readme/game-area.png)
 
 #### Win Screen:
-![Win Screen]()
+![Win Screen](assets/images/images-readme/win-screen.png)
 
 #### Lose Screen:
-![Lose Screen]()
-
-#### Submit & Reset Buttons:
-![Submit & Reset buttons]()
+![Lose Screen](assets/images/images-readme/lose-screen.png)
 
 #### Social Links:
-![Social Links]()
+![Social Links](assets/images/images-readme/footer.png)
 
 
 ### Features Left to Implement
 
 ## Testing
-- The default page image, along with the favicon were loading in the gitpod preview of the site, however would not load through the link generated in github. A friend suggested that the error lay with my file paths starting with a "/", and that my image name also contained a space. Once the space & the starting "/" were removed, the issue was resolved. Thank you [Mats](https://github.com/Pelikantapeten).
-- I struggled to understand how to add an event listener that would also indicate which radio button was toggled. After several hours of trying to understand what I was doing wrong, I contacted C.I. tutor support, and Ger was king enough to show me I had a an errant capital letter in my JS file.
-- Once the functions for all the overlays was in place, it became clear that the third set of toggles caused the image to move places on the screen if the second set of overlays was toggled back & forth. Issue appears to be because the function is creating a new img element each time the button is clicked & appending it to the DOM, causing the relative positioning of the third function to adjust its positioning in comparison. After much trial & error, and the help of Mats, I was able to understand that whilst I was correctly clearing out my div elements, I was placing my code in the wrong order, and clearing out my newly created img elements as well. Repositioning my code resolved the issue.
-- An event listerner for keypress has been added to the submit button. This only appears to function after the submit button has been clicked on once. Prior to that, hitting the 'enter' key produces no results. Ger from tutor support tested the code & confirmed that the event listener works on page load, and had other colleagues also test it. As I cannot replicate their results on Chrome, even after clearing cache/cookies & doing a hard reset, I will take their word for it.
-- The "lose message" only appears once when the submit button is clicked. After that, it does nothing. Discovered that it was the same issue I had experienced earlier, whereby the creation of the new elements in the JS file when clicked, causes the message to shift positioning. To resolve this, I created the img elements in the html file, and loaded them with the default images for the neutral position of each toggle. This ensured that any positioning created in CSS, will no longer be affected by the creation/deletion of new elements. And resoloved the issue. Now, the 'lose screen' loads in the correct place every time.
+The default page image, along with the favicon were loading in the gitpod preview of the site, however would not load through the link generated in github. A friend suggested that the error lay with my file paths starting with a "/", and that my image name also contained a space. Once the space & the starting "/" were removed, the issue was resolved. Thank you [Mats](https://github.com/Pelikantapeten).
+
+I struggled to understand how to add an event listener that would also indicate which radio button was toggled. After several hours of trying to understand what I was doing wrong, I contacted C.I. tutor support, and Ger was king enough to show me I had a an errant capital letter in my JS file. Upon removing it, I was then able to call the radio buttons within the functions.
+
+Once the functions for all the overlays was in place, it became clear that the second set of toggles caused the image to move places on the screen if the second set of overlays was toggled back & forth. Issue appears to be because the function is creating a new img element each time the button is clicked & appending it to the DOM, causing the relative positioning of the third function to adjust its positioning in comparison. After much trial & error, and the help of Mats, I was able to understand that whilst I was correctly clearing out my div elements, I was placing my code in the wrong order, and clearing out my newly created img elements as well. Repositioning my code resolved the issue. This section of coding was eventually removed, and empty img elements were added to the DOM, as the issue was transferring to another overlay.
+
+An event listerner for keypress has been added to the submit button. This only appears to function after the submit button has been clicked on once. Prior to that, hitting the 'enter' key produces no results. Ger from tutor support tested the code & confirmed that the event listener works on page load, and had other colleagues also test it. They suggest that my pop-up blockers are the source of my frustrations. As multiple people have now tested it & confirmed it to be working, it is not a bug at all.
+
+The "lose message" only appears once when the submit button is clicked. After that, it does nothing. Discovered that it was the same issue I had experienced earlier, whereby the creation of the new elements in the JS file when clicked, causes the message to shift positioning. To resolve this, I created the img elements in the html file, and loaded them with the default images for the neutral position of each toggle. This ensured that any positioning created in CSS, will no longer be affected by the creation/deletion of new elements. Now, the 'lose screen' loads in the correct place every time.
 
 ### Validator Testing
 - html files pass through the [W3C validator](https://validator.w3.org/) with no issues found.
+
+![W3C validator message](assets/images/images-readme/validator-html.png)
+
 - CSS files pass through the [Jigsaw validator](https://jigsaw.w3.org/css-validator/) with no issues found.
+
+![Jigsaw validator message](assets/images/images-readme/validator-css.png)
+
 - JS files pass through [JSHint](https://jshint.com/) with no issues found.
+
+![JSHint overview](assets/images/images-readme/validator-js.png)
+
 - page has an excellent Accessibility rating in Lighthouse
 
-![Accessibility score]()
+![Accessibility score](assets/images/images-readme/lighthouse-score.png)
 
 - Tested the site opens in Brave, Chrome & Safari without issues.
 - All links open to external pages as intended.
@@ -146,7 +161,7 @@ The site was deployed to GitHub pages. The steps to deploy are as follows:
 ## Credits
 
 ### Content
-Support was provided by my fellow student [Mats](https://github.com/Pelikantapeten) by aiding me in bouncing off ideas & venting frustrations. They were also immeasurably helpful in explaining Media Queries in a way that I was able to grasp. They also informed me that when creating a contact form, one most also create a form-dump page.
+Support was provided by my fellow student & friend [Mats](https://github.com/Pelikantapeten) by aiding me in bouncing off ideas & venting frustrations. They also provided imesurable support when my brain was too tired to think straight, & helped me to work through my issues with a second set of eyes. I cannot thank them enough for being there for me.
 
 Code for the radio buttons came from [Codepen](https://codepen.io/timtech/pen/ezRamp).
 
