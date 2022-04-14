@@ -39,6 +39,18 @@ h3, p{
     /* padding-bottom:10px; */
 }
 
+/* Instructions Panel */
+#instructions-panel{
+    width:600px;
+    height:600px;
+    border: 3px solid rgb(7, 7, 74);
+    margin:0 auto;
+    text-align:center;
+    padding:50px;
+    font-size:2em;
+    background-color:whitesmoke;
+}
+
 /* Interactive drawing frame in place */
 #image-area{
     width:500px;
@@ -155,14 +167,14 @@ h3, p{
     transform: translateX(2em);
 }
 
-/* Submit, Reset & Info button */
+/* Submit, Reset, Info & Play buttons */
 #game-area{
     text-align:center;
     width:100%;
+    display:none;
 }
 
-#submit-button, #reset-button, #info-button{
-    font-size:150%;
+#submit-button, #reset-button, #info-button, #play-button{
     text-transform:uppercase;
     font-family: 'Rubik Wet Paint', cursive;
     border-radius:10px;
@@ -173,7 +185,15 @@ h3, p{
     color:#B5DAA5;
 }
 
-#info-button{
+#submit-button, #reset-button, #info-button{
+    font-size:150%;
+}
+
+#play-button{
+    font-size:100%;
+}
+
+#info-button, #play-button{
     width:180px;
 }
 
@@ -181,7 +201,10 @@ h3, p{
     width:120px;
 }
 
-#submit-button:hover, #reset-button:hover, #info-button:hover{
+#submit-button:hover,
+#reset-button:hover,
+#info-button:hover,
+#play-button:hover{
     background-color:#B5DAA5;
     color:rgb(7, 7, 74);
 }
@@ -271,7 +294,7 @@ footer{
         width:100px;
     }
 
-    #info-button{
+    #info-button, #play-button{
         font-size:100%;
         width:130px; 
     }
