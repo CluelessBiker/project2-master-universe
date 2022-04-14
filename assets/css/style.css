@@ -319,3 +319,18 @@ footer{
         top: -832px;
     }
 }
+
+@media screen and (min-width:1500px){
+    #lose-message h2{
+        font-size:700%;
+    }
+    #lose-message{
+        top: -1461px;
+    }
+}
+
+@media screen and (min-width:1600px){
+    #win-message h2 {
+        font-size:350%;
+    } 
+}
