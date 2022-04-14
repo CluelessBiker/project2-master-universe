@@ -15,6 +15,11 @@ let nature = document.getElementById("nature");
 let neutral3 = document.getElementById("nature-civilisation");
 let civilisation = document.getElementById("civilisation");
 
+// targetting toggle containers
+let sliderOne = document.getElementById("slider-one");
+let sliderTwo = document.getElementById("slider-two");
+let sliderThree = document.getElementById("slider-three");
+
 // win/lose screen variables
 let winMessage = document.getElementById("win-message");
 let loseMessage = document.getElementById("lose-message");
@@ -124,6 +129,10 @@ function finalTally(event){
     neutral3.disabled = true;
     civilisation.disabled = true;
 
+    sliderOne.style.backgroundColor = "whitesmoke";
+    sliderTwo.style.backgroundColor = "grey";
+    sliderThree.style.backgroundColor = "grey";
+
     if (night.checked && chaos.checked && nature.checked){
         winMessage.style.display = "block";
 
@@ -133,7 +142,6 @@ function finalTally(event){
     } else {
         loseMessage.style.display = "block";
     } 
-    document.getElementsByClassName("sliderContainer").style.background = "red";
 }
 
 /**
@@ -157,8 +165,12 @@ function resetGame(event){
     neutral2.checked = true;
     neutral3.checked = true;
 
+    sliderOne.style.backgroundColor = "#B5DAA5";
+    sliderTwo.style.backgroundColor = "#B5DAA5";
+    sliderThree.style.backgroundColor = "#B5DAA5";
+
     document.getElementById("defaultImage").src='assets/images/images-artwork/defaultimage.png';
-    document.getElementById("firstOverlay").src='assets/images/images-artwork/defaultimage.png';
+    document.getElementById("firstOverlay").src='assets/images/images-artwork/emptyspace.png';
     document.getElementById("secondOverlay").src='assets/images/images-artwork/emptyspace.png';
 
     winMessage.style.display = "none";
