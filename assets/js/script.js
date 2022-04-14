@@ -76,7 +76,7 @@ function natureCivilisation(event){
 let submit = document.getElementById('submit-button');
 submit.addEventListener('click', finalTally);
 
-addEventListener("keydown", function(event) {
+submit.addEventListener("keydown", function(event) {
     if (event.key === "enter") {
         submit.addEventListener('click', finalTally());
     }
@@ -87,6 +87,8 @@ addEventListener("keydown", function(event) {
  * A win/lose message is displayed upon completion.
  */
 function finalTally(event){
+    submit.disabled = true;
+
     if (night.checked && chaos.checked && nature.checked){
         winMessage.style.display = "block";
 
@@ -108,6 +110,8 @@ resetButton.addEventListener('click', resetGame);
  * Clears win screen background 
  */
 function resetGame(event){
+    submit.disabled = false;
+
     neutral.checked = true;
     neutral2.checked = true;
     neutral3.checked = true;
