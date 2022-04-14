@@ -155,13 +155,13 @@ h3, p{
     transform: translateX(2em);
 }
 
-/* Submit & reset button */
+/* Submit, Reset & Info button */
 #game-area{
     text-align:center;
     width:100%;
 }
 
-#submit-button, #reset-button{
+#submit-button, #reset-button, #info-button{
     font-size:150%;
     text-transform:uppercase;
     font-family: 'Rubik Wet Paint', cursive;
@@ -174,7 +174,7 @@ h3, p{
     width:120px;
 }
 
-#submit-button:hover, #reset-button:hover{
+#submit-button:hover, #reset-button:hover, #info-button:hover{
     background-color:#B5DAA5;
     color:rgb(7, 7, 74);
 }
@@ -259,7 +259,7 @@ footer{
     }
 
     /* Submit/Reset buttons */
-    #submit-button, #reset-button{
+    #submit-button, #reset-button, #info-button{
         font-size:100%;
         width:100px;
     }
