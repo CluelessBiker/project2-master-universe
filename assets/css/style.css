@@ -41,13 +41,14 @@ h3, p{
 
 /* Instructions Panel */
 #instructions-panel{
-    width:600px;
-    height:600px;
+    width:500px;
+    height:500px;
     border: 3px solid rgb(7, 7, 74);
     margin:0 auto;
     text-align:center;
-    padding:50px;
-    font-size:2em;
+    padding:40px;
+    box-sizing: border-box;
+    font-size:1.8em;
     background-color:whitesmoke;
     display:none;
 }
@@ -277,6 +278,15 @@ footer{
 
     #pageTitle h2{
         font-size:100%;
+    }
+
+    /* Instructions page */
+    #instructions-panel {
+        width:auto;
+        height:auto;
+        padding:10px;
+        margin:10px;
+        font-size: 1.3em;
     }
     
     /* image area & overlays */
