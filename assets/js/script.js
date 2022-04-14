@@ -31,6 +31,18 @@ function loadInstructions(event){
     gameArea.style.display = "none";
 }
 
+// Event listener for 'Play now' button
+let playNow = document.getElementById("play-button");
+playNow.addEventListener('click', hideInstructions);
+
+/**
+ * Function to hide the instructions page
+ */
+function hideInstructions(event){
+    instructionsPanel.style.display = "none";
+    gameArea.style.display = "block";
+}
+
 // Event listener for first set of toggles : day/night
 let firstToggle = document.getElementById("toggleDayNight");
 firstToggle.addEventListener('click', dayNight);
