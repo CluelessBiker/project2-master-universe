@@ -160,5 +160,7 @@ Code for changing the image source in JS came from [DelftStack](https://www.delf
 
 Instructions for adding a backround image came from [W3Schools](https://www.w3schools.com/jsref/prop_style_backgroundimage.asp), as well as how to add background positioning [W3Schools](https://www.w3schools.com/jsref/prop_style_backgroundposition.asp)
 
+Information on deactivating an event listener after being clicked came from [Alvarotrigo](https://alvarotrigo.com/blog/disable-button-javascript/#:~:text=To%20disable%20a%20button%20using,disabled%20JavaScript%20property%20to%20false%20.)
+
 ### Media
 - All artwork created by me.

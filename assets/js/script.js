@@ -88,6 +88,15 @@ submit.addEventListener("keydown", function(event) {
  */
 function finalTally(event){
     submit.disabled = true;
+    day.disabled = true;
+    neutral.disabled = true;
+    night.disabled = true;
+    calm.disabled = true;
+    neutral2.disabled = true;
+    chaos.disabled = true;
+    nature.disabled = true;
+    neutral3.disabled = true;
+    civilisation.disabled = true;
 
     if (night.checked && chaos.checked && nature.checked){
         winMessage.style.display = "block";
@@ -111,6 +120,15 @@ resetButton.addEventListener('click', resetGame);
  */
 function resetGame(event){
     submit.disabled = false;
+    day.disabled = false;
+    neutral.disabled = false;
+    night.disabled = false;
+    calm.disabled = false;
+    neutral2.disabled = false;
+    chaos.disabled = false;
+    nature.disabled = false;
+    neutral3.disabled = false;
+    civilisation.disabled = false;
 
     neutral.checked = true;
     neutral2.checked = true;
